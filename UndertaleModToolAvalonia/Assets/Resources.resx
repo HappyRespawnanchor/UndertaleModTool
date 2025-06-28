@@ -18,7 +18,19 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader> 
-    <data name="GreetingText" xml:space="preserve">
-        <value>Good Day!</value>
+    <data name="ThemeText" xml:space="preserve">
+        <value>Theme:</value>
+    </data>
+    <data name="SystemDefaultText" xml:space="preserve">
+        <value>System Default</value>
+    </data>
+    <data name="LightText" xml:space="preserve">
+        <value>Light</value>
+    </data>
+    <data name="DarkText" xml:space="preserve">
+        <value>Dark</value>
+    </data>
+    <data name="LanguageText" xml:space="preserve">
+        <value>Language:</value>
     </data>
 </root>

@@ -45,9 +45,39 @@ namespace UndertaleModToolAvalonia.Assets {
             }
         }
         
-        public static string GreetingText {
+
+        public static string ThemeText {
             get {
-                return ResourceManager.GetString("GreetingText", resourceCulture);
+                return ResourceManager.GetString("HelloWorld", resourceCulture);
+            }
+        }
+
+        public static string LanguageText
+        {
+            get
+            {
+                return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        public static string SystemDefaultText
+        {
+            get
+            {
+                return ResourceManager.GetString("SystemDefault", resourceCulture);
+            }
+        }
+        public static string LightText
+        {
+            get
+            {
+                return ResourceManager.GetString("Light", resourceCulture);
+            }
+        }
+        public static string DarkText
+        {
+            get
+            {
+                return ResourceManager.GetString("Dark", resourceCulture);
             }
         }
     }
