@@ -7,6 +7,7 @@
              xmlns:c="clr-namespace:UndertaleModToolAvalonia.Controls"
              xmlns:undertale="clr-namespace:UndertaleModLib;assembly=UndertaleModLib"
              xmlns:undertalem="clr-namespace:UndertaleModLib.Models;assembly=UndertaleModLib"
+             xmlns:lang="clr-namespace:UndertaleModToolAvalonia.Assets"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="UndertaleModToolAvalonia.Views.MainView"
              x:DataType="v:MainViewModel">
@@ -35,7 +36,7 @@
                         <Button>←</Button>
                         <Button>→</Button>
                     </StackPanel>
-                    <TextBox Name="FilterTextBox" Watermark="Filter by name..." TextChanged="FilterTextBox_TextChanged"/>
+                    <TextBox Name="FilterTextBox" Watermark="{x:Static lang:Resources.FilterByNameText}" TextChanged="FilterTextBox_TextChanged"/>
                 </StackPanel>
                 <c:DataTreeView Grid.Row="1" Name="DataTreeView" Data="{Binding Data}" />
             </Grid>

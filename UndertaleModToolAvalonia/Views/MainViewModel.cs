@@ -12,6 +12,7 @@ using Avalonia.Platform.Storage;
 using PropertyChanged.SourceGenerator;
 using UndertaleModLib;
 using UndertaleModLib.Models;
+using UndertaleModToolAvalonia.Assets;
 using UndertaleModToolAvalonia.Controls;
 using UndertaleModToolAvalonia.Core;
 
@@ -75,8 +76,8 @@ public partial class MainViewModel
     {
         Tabs = [
             new TabItemViewModel(new DescriptionViewModel(
-                "Welcome to UndertaleModTool!",
-                "Open a data.win file to get started, then double click on the items on the left to view them."),
+                Resources.WelcomeText,
+                Resources.WelcomeDescription),
                 isSelected: true),
         ];
     }

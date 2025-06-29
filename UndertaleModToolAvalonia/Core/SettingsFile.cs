@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Globalization;
 using Avalonia.Animation;
 using Avalonia.Controls;
@@ -14,7 +15,7 @@ using UndertaleModToolAvalonia.Views;
 
 namespace UndertaleModToolAvalonia.Core;
 
-public partial class SettingsFile
+public partial class SettingsFile : INotifyPropertyChanged
 {
     public enum ThemeValue
     {
@@ -31,8 +32,42 @@ public partial class SettingsFile
     [Notify]
     private ThemeValue _Theme;
 
-    [Notify]
-    public LanguageValue _Language;
+    private LanguageValue _Language = GetDefaultLanguage();
+    public LanguageValue Language
+    {
+        get => _Language;
+        set
+        {
+            if (_Language != value)
+            {
+                _Language = value;
+                OnLanguageChanged();
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Language)));
+            }
+        }
+    }
+
+    /// <summary>
+    /// 当前UI实际语言（只读，可用于显示，不用于绑定ComboBox）
+    /// </summary>
+    public LanguageValue CurrentLanguage
+    {
+        get
+        {
+            var name = CultureInfo.CurrentUICulture.Name;
+            if (name.StartsWith("zh", StringComparison.OrdinalIgnoreCase))
+                return LanguageValue.ChineseSimplified;
+            return LanguageValue.English;
+        }
+    }
+
+    private static LanguageValue GetDefaultLanguage()
+    {
+        var name = CultureInfo.CurrentUICulture.Name;
+        if (name.StartsWith("zh", StringComparison.OrdinalIgnoreCase))
+            return LanguageValue.ChineseSimplified;
+        return LanguageValue.English;
+    }
 
     void OnThemeChanged()
     {
@@ -50,21 +85,22 @@ public partial class SettingsFile
     
     void OnLanguageChanged()
     {
-        CultureInfo.CurrentUICulture = Language switch
+        switch (_Language)
         {
-            LanguageValue.English => new CultureInfo("en"),
-            LanguageValue.ChineseSimplified => new CultureInfo("zh-Hans"),
-            _ => CultureInfo.CurrentUICulture
-        };
-        
-        
+            case LanguageValue.English:
+                CultureInfo.CurrentUICulture = new CultureInfo("en");
+                break;
+            case LanguageValue.ChineseSimplified:
+                CultureInfo.CurrentUICulture = new CultureInfo("zh-Hans");
+                break;
+        }
+
         MessageWindow window = new MessageWindow(titleText: Resources.LanguageChangedTitle,
-            message: Resources.RestartUndertaleModToolToApplyNewLanguage, hasNoButton: true, hasYesButton: true);
-  
-        
+            message: Resources.RestartToApplyNewLanguageText, hasNoButton: true, hasYesButton: true);
         window.Initialize();
         window.Show();
-        
     }
-    
+
+    // 若未实现INotifyPropertyChanged接口，请补充如下：
+    public event PropertyChangedEventHandler? PropertyChanged;
 }

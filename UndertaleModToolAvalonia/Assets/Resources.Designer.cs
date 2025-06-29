@@ -48,7 +48,7 @@ namespace UndertaleModToolAvalonia.Assets {
 
         public static string ThemeText {
             get {
-                return ResourceManager.GetString("HelloWorld", resourceCulture);
+                return ResourceManager.GetString("ThemeText", resourceCulture);
             }
         }
 
@@ -56,28 +56,28 @@ namespace UndertaleModToolAvalonia.Assets {
         {
             get
             {
-                return ResourceManager.GetString("Language", resourceCulture);
+                return ResourceManager.GetString("LanguageText", resourceCulture);
             }
         }
         public static string SystemDefaultText
         {
             get
             {
-                return ResourceManager.GetString("SystemDefault", resourceCulture);
+                return ResourceManager.GetString("SystemDefaultText", resourceCulture);
             }
         }
         public static string LightText
         {
             get
             {
-                return ResourceManager.GetString("Light", resourceCulture);
+                return ResourceManager.GetString("LightText", resourceCulture);
             }
         }
         public static string DarkText
         {
             get
             {
-                return ResourceManager.GetString("Dark", resourceCulture);
+                return ResourceManager.GetString("DarkText", resourceCulture);
             }
         }
 
@@ -89,13 +89,42 @@ namespace UndertaleModToolAvalonia.Assets {
             }
         }
 
-        public static string RestartUndertaleModToolToApplyNewLanguage 
+        public static string RestartToApplyNewLanguageText 
         {
             get
             {
-                return ResourceManager.GetString("RestartUndertaleModToolToApplyNewLanguage", resourceCulture);
+                return ResourceManager.GetString("RestartToApplyNewLanguageText", resourceCulture);
+            }
+        }
+        public static string WelcomeText
+        {
+            get
+            {
+                return ResourceManager.GetString("WelcomeText", resourceCulture);
+            }
+        }
+        //WelcomeToUTMTTextDescription
+        public static string WelcomeDescription
+        {
+            get
+            {
+                return ResourceManager.GetString("WelcomeDescription", resourceCulture);
+            }
+        }
+
+        public static string FilterByNameText { 
+            get {
+                return ResourceManager.GetString("FilterByNameText", resourceCulture);
+            }
+        }
+
+        public static string FileMenuText { 
+            get
+            {
+                return ResourceManager.GetString("FileMenuText", resourceCulture);            
             }
         }
     }
+    
 }
 

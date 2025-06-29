@@ -36,8 +36,71 @@
     <data name="LanguageChangedTitle" xml:space="preserve">
         <value>Language Changed</value>
     </data>
-    <data name="RestartUndertaleModToolToApplyNewLanguage" xml:space="preserve">
+    <data name="RestartToApplyNewLanguageText" xml:space="preserve">
         <value>The language has been changed.
 Restart UndertaleModTool now to apply changes?</value>
+    </data>
+    <data name="GreetingText" xml:space="preserve">
+        <value>Greeting</value>
+    </data>
+    <data name="WelcomeText" xml:space="preserve">
+        <value>Welcome to UndertaleModTool!</value>
+    </data>
+    <data name="WelcomeDescription" xml:space="preserve">
+        <value>Open a data.win file to get started, then double click on the items on the left to view them.</value>
+    </data>
+    <data name="FilterByNameText" xml:space="preserve">
+        <value>Filter by name...</value>
+    </data>
+    <data name="FileMenuText" xml:space="preserve">
+        <value>_File</value>
+    </data>
+    <data name="FileNewText" xml:space="preserve">
+        <value>_New</value>
+    </data>
+    <data name="FileOpenText" xml:space="preserve">
+        <value>_Open</value>
+    </data>
+    <data name="FileSaveText" xml:space="preserve">
+        <value>_Save</value>
+    </data>
+    <data name="TempRunGameText" xml:space="preserve">
+        <value>_Temp run game</value>
+    </data>
+    <data name="RunGameUnderDebuggerText" xml:space="preserve">
+        <value>Run game under GMS _debugger</value>
+    </data>
+    <data name="RunGameWithOtherRunnerText" xml:space="preserve">
+        <value>Run game with other runner</value>
+    </data>
+    <data name="GenerateOffsetMapText" xml:space="preserve">
+        <value>Generate o_ffset map</value>
+    </data>
+    <data name="SettingsText" xml:space="preserve">
+        <value>S_ettings</value>
+    </data>
+    <data name="FileCloseText" xml:space="preserve">
+        <value>_Close</value>
+    </data>
+    <data name="ScriptMenuText" xml:space="preserve">
+        <value>_Script</value>
+    </data>
+    <data name="FindMenuText" xml:space="preserve">
+        <value>_Find</value>
+    </data>
+    <data name="SearchInCodeText" xml:space="preserve">
+        <value>_Search in code</value>
+    </data>
+    <data name="FindUnreferencedAssetsText" xml:space="preserve">
+        <value>Find unreferenced _assets</value>
+    </data>
+    <data name="HelpMenuText" xml:space="preserve">
+        <value>_Help</value>
+    </data>
+    <data name="GitHubText" xml:space="preserve">
+        <value>_GitHub</value>
+    </data>
+    <data name="AboutText" xml:space="preserve">
+        <value>_About</value>
     </data>
 </root>

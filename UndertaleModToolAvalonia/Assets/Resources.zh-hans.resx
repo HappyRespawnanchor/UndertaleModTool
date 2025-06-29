@@ -29,7 +29,70 @@
     <data name="LanguageChangedTitle" xml:space="preserve">
         <value>语言更改</value>
     </data>
-    <data name="RestartUndertaleModToolToApplyNewLanguage" xml:space="preserve">
-        <value>要重启 UndertaleModToll 以应用新的语言设置吗？</value>
+    <data name="GreetingText" xml:space="preserve">
+        <value>你好！</value>
+    </data>
+    <data name="WelcomeText" xml:space="preserve">
+        <value>欢迎使用 UndertaleModTool！</value>
+    </data>
+    <data name="RestartToApplyNewLanguageText" xml:space="preserve">
+        <value>要重启 UndertaleModTool 以应用新的语言设置吗？</value>
+    </data>
+    <data name="WelcomeDescription" xml:space="preserve">
+        <value>请打开一个 data.win 文件并在左侧侧栏中选择一个项目开始浏览。</value>
+    </data>
+    <data name="FilterByNameText" xml:space="preserve">
+        <value>按名称筛选……</value>
+    </data>
+    <data name="FileMenuText" xml:space="preserve">
+        <value>_文件</value>
+    </data>
+    <data name="FileNewText" xml:space="preserve">
+        <value>新建(_N)</value>
+    </data>
+    <data name="FileOpenText" xml:space="preserve">
+        <value>打开(_O)</value>
+    </data>
+    <data name="FileSaveText" xml:space="preserve">
+        <value>保存(_S)</value>
+    </data>
+    <data name="TempRunGameText" xml:space="preserve">
+        <value>临时运行游戏(_T)</value>
+    </data>
+    <data name="RunGameUnderDebuggerText" xml:space="preserve">
+        <value>在 GMS 调试器下运行游戏</value>
+    </data>
+    <data name="RunGameWithOtherRunnerText" xml:space="preserve">
+        <value>用其他运行器运行游戏</value>
+    </data>
+    <data name="GenerateOffsetMapText" xml:space="preserve">
+        <value>生成偏移映射(_F)</value>
+    </data>
+    <data name="SettingsText" xml:space="preserve">
+        <value>设置(_E)</value>
+    </data>
+    <data name="FileCloseText" xml:space="preserve">
+        <value>关闭(_C)</value>
+    </data>
+    <data name="ScriptMenuText" xml:space="preserve">
+        <value>脚本(_S)</value>
+    </data>
+    <data name="FindMenuText" xml:space="preserve">
+        <value>查找(_F)</value>
+    </data>
+    <data name="SearchInCodeText" xml:space="preserve">
+        <value>在代码中查找(_S)</value>
+    </data>
+    <data name="FindUnreferencedAssetsText" xml:space="preserve">
+        <value>查找未引用资源(_A)</value>
+    </data>
+    <data name="HelpMenuText" xml:space="preserve">
+        <value>帮助(_H)</value>
+    </data>
+    <data name="GitHubText" xml:space="preserve">
+        <value>GitHub</value>
+    </data>
+    <data name="AboutText" xml:space="preserve">
+        <value>关于(_A)</value>
     </data>
 </root>
