@@ -40,9 +40,6 @@
         <value>The language has been changed.
 Restart UndertaleModTool now to apply changes?</value>
     </data>
-    <data name="GreetingText" xml:space="preserve">
-        <value>Greeting</value>
-    </data>
     <data name="WelcomeText" xml:space="preserve">
         <value>Welcome to UndertaleModTool!</value>
     </data>
@@ -102,5 +99,89 @@ Restart UndertaleModTool now to apply changes?</value>
     </data>
     <data name="AboutText" xml:space="preserve">
         <value>_About</value>
+    </data>
+    <data name="GeneralInfoText" xml:space="preserve">
+        <value>General info</value>
+    </data>
+    <data name="GlobalInitText" xml:space="preserve">
+        <value>Global init</value>
+    </data>
+    <data name="GameEndScriptsText" xml:space="preserve">
+        <value>Game end scripts</value>
+    </data>
+    <data name="AudioGroupsText" xml:space="preserve">
+        <value>Audio groups</value>
+    </data>
+    <data name="SoundsText" xml:space="preserve">
+        <value>Sounds</value>
+    </data>
+    <data name="SpritesText" xml:space="preserve">
+        <value>Sprites</value>
+    </data>
+    <data name="BackgroundsText" xml:space="preserve">
+        <value>Backgrounds</value>
+    </data>
+    <data name="PathsText" xml:space="preserve">
+        <value>Paths</value>
+    </data>
+    <data name="ScriptsText" xml:space="preserve">
+        <value>Scripts</value>
+    </data>
+    <data name="ShadersText" xml:space="preserve">
+        <value>Shaders</value>
+    </data>
+    <data name="FontsText" xml:space="preserve">
+        <value>Fonts</value>
+    </data>
+    <data name="TimelinesText" xml:space="preserve">
+        <value>Timelines</value>
+    </data>
+    <data name="GameObjectsText" xml:space="preserve">
+        <value>Game objects</value>
+    </data>
+    <data name="RoomsText" xml:space="preserve">
+        <value>Rooms</value>
+    </data>
+    <data name="ExtensionsText" xml:space="preserve">
+        <value>Extensions</value>
+    </data>
+    <data name="TexturePageItemsText" xml:space="preserve">
+        <value>Texture page items</value>
+    </data>
+    <data name="CodeText" xml:space="preserve">
+        <value>Code</value>
+    </data>
+    <data name="VariablesText" xml:space="preserve">
+        <value>Variables</value>
+    </data>
+    <data name="FunctionsText" xml:space="preserve">
+        <value>Functions</value>
+    </data>
+    <data name="CodeLocalsText" xml:space="preserve">
+        <value>Code locals text</value>
+    </data>
+    <data name="StringsText" xml:space="preserve">
+        <value>Strings</value>
+    </data>
+    <data name="EmbeddedTexturesText" xml:space="preserve">
+        <value>Embedded textures</value>
+    </data>
+    <data name="EmbeddedAudioText" xml:space="preserve">
+        <value>Embedded audio</value>
+    </data>
+    <data name="TextureGroupInformationText" xml:space="preserve">
+        <value>Texture group information text</value>
+    </data>
+    <data name="EmbeddedImagesText" xml:space="preserve">
+        <value>Embedded images</value>
+    </data>
+    <data name="ParticleSystemsText" xml:space="preserve">
+        <value>Particle systems</value>
+    </data>
+    <data name="ParticleSystemEmittersText" xml:space="preserve">
+        <value>Particle system emitters</value>
+    </data>
+    <data name="GlobalInitScriptsText" xml:space="preserve">
+        <value>Global init scripts</value>
     </data>
 </root>

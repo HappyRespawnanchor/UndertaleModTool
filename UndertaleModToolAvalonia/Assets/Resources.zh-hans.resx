@@ -18,7 +18,7 @@
         <value>语言：</value>
     </data>
     <data name="LightText" xml:space="preserve">
-        <value>浅色：</value>
+        <value>浅色</value>
     </data>
     <data name="SystemDefaultText" xml:space="preserve">
         <value>跟随系统</value>
@@ -27,10 +27,7 @@
         <value>主题色：</value>
     </data>
     <data name="LanguageChangedTitle" xml:space="preserve">
-        <value>语言更改</value>
-    </data>
-    <data name="GreetingText" xml:space="preserve">
-        <value>你好！</value>
+        <value>语言已更改</value>
     </data>
     <data name="WelcomeText" xml:space="preserve">
         <value>欢迎使用 UndertaleModTool！</value>
@@ -45,7 +42,7 @@
         <value>按名称筛选……</value>
     </data>
     <data name="FileMenuText" xml:space="preserve">
-        <value>_文件</value>
+        <value>文件(_F)</value>
     </data>
     <data name="FileNewText" xml:space="preserve">
         <value>新建(_N)</value>
@@ -60,10 +57,10 @@
         <value>临时运行游戏(_T)</value>
     </data>
     <data name="RunGameUnderDebuggerText" xml:space="preserve">
-        <value>在 GMS 调试器下运行游戏</value>
+        <value>使用 GMS 调试器运行游戏(_D)</value>
     </data>
     <data name="RunGameWithOtherRunnerText" xml:space="preserve">
-        <value>用其他运行器运行游戏</value>
+        <value>使用其他 Runner 运行游戏</value>
     </data>
     <data name="GenerateOffsetMapText" xml:space="preserve">
         <value>生成偏移映射(_F)</value>
@@ -89,10 +86,94 @@
     <data name="HelpMenuText" xml:space="preserve">
         <value>帮助(_H)</value>
     </data>
-    <data name="GitHubText" xml:space="preserve">
-        <value>GitHub</value>
-    </data>
     <data name="AboutText" xml:space="preserve">
-        <value>关于(_A)</value>
+        <value>关于 (_A)</value>
+    </data>
+    <data name="GitHubText" xml:space="preserve">
+        <value>_GitHub</value>
+    </data>
+    <data name="GeneralInfoText" xml:space="preserve">
+        <value>常规信息</value>
+    </data>
+    <data name="GlobalInitText" xml:space="preserve">
+        <value>全局初始化</value>
+    </data>
+    <data name="GameEndScriptsText" xml:space="preserve">
+        <value>游戏结束脚本</value>
+    </data>
+    <data name="AudioGroupsText" xml:space="preserve">
+        <value>音效组</value>
+    </data>
+    <data name="SoundsText" xml:space="preserve">
+        <value>音效</value>
+    </data>
+    <data name="SpritesText" xml:space="preserve">
+        <value>精灵</value>
+    </data>
+    <data name="BackgroundsText" xml:space="preserve">
+        <value>背景</value>
+    </data>
+    <data name="PathsText" xml:space="preserve">
+        <value>路径</value>
+    </data>
+    <data name="ScriptsText" xml:space="preserve">
+        <value>脚本</value>
+    </data>
+    <data name="ShadersText" xml:space="preserve">
+        <value>着色器</value>
+    </data>
+    <data name="FontsText" xml:space="preserve">
+        <value>字体</value>
+    </data>
+    <data name="TimelinesText" xml:space="preserve">
+        <value>时间线</value>
+    </data>
+    <data name="GameObjectsText" xml:space="preserve">
+        <value>游戏对象</value>
+    </data>
+    <data name="RoomsText" xml:space="preserve">
+        <value>房间</value>
+    </data>
+    <data name="ExtensionsText" xml:space="preserve">
+        <value>扩展</value>
+    </data>
+    <data name="TexturePageItemsText" xml:space="preserve">
+        <value>纹理页元素</value>
+    </data>
+    <data name="CodeText" xml:space="preserve">
+        <value>代码</value>
+    </data>
+    <data name="VariablesText" xml:space="preserve">
+        <value>变量</value>
+    </data>
+    <data name="FunctionsText" xml:space="preserve">
+        <value>函数</value>
+    </data>
+    <data name="CodeLocalsText" xml:space="preserve">
+        <value>局部变量</value>
+    </data>
+    <data name="StringsText" xml:space="preserve">
+        <value>字符串</value>
+    </data>
+    <data name="EmbeddedTexturesText" xml:space="preserve">
+        <value>内嵌纹理</value>
+    </data>
+    <data name="EmbeddedAudioText" xml:space="preserve">
+        <value>内嵌音频</value>
+    </data>
+    <data name="TextureGroupInformationText" xml:space="preserve">
+        <value>纹理组信息</value>
+    </data>
+    <data name="EmbeddedImagesText" xml:space="preserve">
+        <value>内嵌图像</value>
+    </data>
+    <data name="ParticleSystemsText" xml:space="preserve">
+        <value>粒子系统</value>
+    </data>
+    <data name="ParticleSystemEmittersText" xml:space="preserve">
+        <value>粒子发射源</value>
+    </data>
+    <data name="GlobalInitScriptsText" xml:space="preserve">
+        <value>全局初始化脚本</value>
     </data>
 </root>

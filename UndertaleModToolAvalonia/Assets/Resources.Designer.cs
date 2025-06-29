@@ -7,124 +7,345 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UndertaleModToolAvalonia.Assets {
+using System.Resources;
+
+namespace UndertaleModToolAvalonia.Assets
+{
     using System;
-    
-    
+
+
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
-        
+    internal class Resources
+    {
+
         private static System.Resources.ResourceManager resourceMan;
-        
+
         private static System.Globalization.CultureInfo resourceCulture;
-        
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance",
+            "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources()
+        {
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static System.Resources.ResourceManager ResourceManager {
-            get {
-                if (object.Equals(null, resourceMan)) {
-                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("UndertaleModToolAvalonia.Assets.Resources", typeof(Resources).Assembly);
+        internal static System.Resources.ResourceManager ResourceManager
+        {
+            get
+            {
+                if (object.Equals(null, resourceMan))
+                {
+                    System.Resources.ResourceManager temp =
+                        new System.Resources.ResourceManager("UndertaleModToolAvalonia.Assets.Resources",
+                            typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
+
                 return resourceMan;
             }
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static System.Globalization.CultureInfo Culture {
-            get {
-                return resourceCulture;
-            }
-            set {
-                resourceCulture = value;
-            }
-        }
-        
 
-        public static string ThemeText {
-            get {
-                return ResourceManager.GetString("ThemeText", resourceCulture);
-            }
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static System.Globalization.CultureInfo Culture
+        {
+            get { return resourceCulture; }
+            set { resourceCulture = value; }
+        }
+
+
+        public static string ThemeText
+        {
+            get { return ResourceManager.GetString("ThemeText", resourceCulture); }
         }
 
         public static string LanguageText
         {
-            get
-            {
-                return ResourceManager.GetString("LanguageText", resourceCulture);
-            }
+            get { return ResourceManager.GetString("LanguageText", resourceCulture); }
         }
+
         public static string SystemDefaultText
         {
-            get
-            {
-                return ResourceManager.GetString("SystemDefaultText", resourceCulture);
-            }
+            get { return ResourceManager.GetString("SystemDefaultText", resourceCulture); }
         }
+
         public static string LightText
         {
-            get
-            {
-                return ResourceManager.GetString("LightText", resourceCulture);
-            }
+            get { return ResourceManager.GetString("LightText", resourceCulture); }
         }
+
         public static string DarkText
         {
-            get
-            {
-                return ResourceManager.GetString("DarkText", resourceCulture);
-            }
+            get { return ResourceManager.GetString("DarkText", resourceCulture); }
         }
 
         public static string LanguageChangedTitle
         {
-            get
-            {
-                return ResourceManager.GetString("LanguageChangedTitle", resourceCulture);
-            }
+            get { return ResourceManager.GetString("LanguageChangedTitle", resourceCulture); }
         }
 
-        public static string RestartToApplyNewLanguageText 
+        public static string RestartToApplyNewLanguageText
         {
-            get
-            {
-                return ResourceManager.GetString("RestartToApplyNewLanguageText", resourceCulture);
-            }
+            get { return ResourceManager.GetString("RestartToApplyNewLanguageText", resourceCulture); }
         }
+
         public static string WelcomeText
         {
-            get
-            {
-                return ResourceManager.GetString("WelcomeText", resourceCulture);
-            }
+            get { return ResourceManager.GetString("WelcomeText", resourceCulture); }
         }
+
         //WelcomeToUTMTTextDescription
         public static string WelcomeDescription
         {
-            get
-            {
-                return ResourceManager.GetString("WelcomeDescription", resourceCulture);
-            }
+            get { return ResourceManager.GetString("WelcomeDescription", resourceCulture); }
         }
 
-        public static string FilterByNameText { 
-            get {
-                return ResourceManager.GetString("FilterByNameText", resourceCulture);
-            }
+        public static string FilterByNameText
+        {
+            get { return ResourceManager.GetString("FilterByNameText", resourceCulture); }
         }
 
-        public static string FileMenuText { 
-            get
-            {
-                return ResourceManager.GetString("FileMenuText", resourceCulture);            
-            }
+        public static string FileMenuText
+        {
+            get { return ResourceManager.GetString("FileMenuText", resourceCulture); }
         }
+
+        public static string AboutText
+        {
+            get { return ResourceManager.GetString("AboutText", resourceCulture); }
+        }
+
+        public static string GitHubText
+        {
+            get { return ResourceManager.GetString("GitHubText", resourceCulture); }
+        }
+
+        public static string HelpMenuText
+        {
+            get { return ResourceManager.GetString("HelpMenuText", resourceCulture); }
+        }
+
+        public static string FindUnreferencedAssetsText
+        {
+            get { return ResourceManager.GetString("FindUnreferencedAssetsText", resourceCulture); }
+        }
+
+        public static string SearchInCodeText
+        {
+            get { return ResourceManager.GetString("SearchInCodeText", resourceCulture); }
+        }
+
+        public static string FindMenuText
+        {
+            get { return ResourceManager.GetString("FindMenuText", resourceCulture); }
+        }
+
+        public static string ScriptMenuText
+        {
+            get { return ResourceManager.GetString("ScriptMenuText", resourceCulture); }
+        }
+
+        public static string FileNewText
+        {
+            get { return ResourceManager.GetString("FileNewText", resourceCulture); }
+        }
+
+        public static string FileOpenText
+        {
+            get { return ResourceManager.GetString("FileOpenText", resourceCulture); }
+        }
+
+        public static string FileSaveText
+        {
+            get { return ResourceManager.GetString("FileSaveText", resourceCulture); }
+        }
+
+        public static string TempRunGameText
+        {
+            get { return ResourceManager.GetString("TempRunGameText", resourceCulture); }
+        }
+
+        public static string RunGameUnderDebuggerText
+        {
+            get { return ResourceManager.GetString("RunGameUnderDebuggerText", resourceCulture); }
+        }
+
+        public static string RunGameWithOtherRunnerText
+        {
+            get { return ResourceManager.GetString("RunGameWithOtherRunnerText", resourceCulture); }
+        }
+
+        public static string GenerateOffsetMapText
+        {
+            get { return ResourceManager.GetString("GenerateOffsetMapText", resourceCulture); }
+        }
+
+        public static string SettingsText
+        {
+            get { return ResourceManager.GetString("SettingsText", resourceCulture); }
+        }
+
+        public static string FileCloseText
+        {
+            get { return ResourceManager.GetString("FileCloseText", resourceCulture); }
+        }
+
+
+        /*
+         *     new(this, value: "GeneralInfo", header: "General info"),
+               new(this, value: "GlobalInitScripts", header: "Global init scripts"),
+               new(this, value: "GameEndScripts", header: "Game End scripts"),
+               new(this, tag: "list", value: "AudioGroups", header: "Audio groups"),
+               new(this, tag: "list", value: "Sounds", header: "Sounds"),
+               new(this, tag: "list", value: "Sprites", header: "Sprites"),
+               new(this, tag: "list", value: "Backgrounds", header: "Backgrounds & Tile sets"),
+               new(this, tag: "list", value: "Paths", header: "Paths"),
+               new(this, tag: "list", value: "Scripts", header: "Scripts"),
+               new(this, tag: "list", value: "Shaders", header: "Shaders"),
+               new(this, tag: "list", value: "Fonts", header: "Fonts"),
+               new(this, tag: "list", value: "Timelines", header: "Timelines"),
+               new(this, tag: "list", value: "GameObjects", header: "Game objects"),
+               new(this, tag: "list", value: "Rooms", header: "Rooms"),
+               new(this, tag: "list", value: "Extensions", header: "Extensions"),
+               new(this, tag: "list", value: "TexturePageItems", header: "Texture page items"),
+               new(this, tag: "list", value: "Code", header: "Code"),
+               new(this, tag: "list", value: "Variables", header: "Variables"),
+               new(this, tag: "list", value: "Functions", header: "Functions"),
+               new(this, tag: "list", value: "CodeLocals", header: "Code locals"),
+               new(this, tag: "list", value: "Strings", header: "Strings"),
+               new(this, tag: "list", value: "EmbeddedTextures", header: "Embedded textures"),
+               new(this, tag: "list", value: "EmbeddedAudio", header: "Embedded audio"),
+               new(this, tag: "list", value: "TextureGroupInformation", header: "Texture group information"),
+               new(this, tag: "list", value: "EmbeddedImages", header: "Embedded images"),
+               new(this, tag: "list", value: "ParticleSystems", header: "Particle systems"),
+               new(this, tag: "list", value: "ParticleSystemEmitters", header: "Particle system emitters"),
+           };
+         */
+        public static string GeneralInfoText
+        {
+            get { return ResourceManager.GetString("GeneralInfoText", resourceCulture); }
+        }
+
+        public static string GlobalInitScriptsText
+        {
+            get { return ResourceManager.GetString("GlobalInitScriptsText", resourceCulture); }
+        }
+
+        public static string GameEndScriptsText
+        {
+            get { return ResourceManager.GetString("GameEndScriptsText", resourceCulture); }
+        }
+
+        public static string AudioGroupsText
+        {
+            get { return ResourceManager.GetString("AudioGroupsText", resourceCulture); }
+        }
+
+        public static string SoundsText
+        {
+            get { return ResourceManager.GetString("SoundsText", resourceCulture); }
+        }
+
+        public static string SpritesText
+        {
+            get { return ResourceManager.GetString("SpritesText", resourceCulture); }
+        }
+
+        public static string BackgroundsText
+        {
+            get { return ResourceManager.GetString("BackgroundsText", resourceCulture); }
+        }
+
+        public static string PathsText
+        {
+            get { return ResourceManager.GetString("PathsText", resourceCulture); }
+        }
+
+        public static string ScriptsText
+        {
+            get { return ResourceManager.GetString("ScriptsText", resourceCulture); }
+        }
+
+        public static string ShadersText
+        {
+            get { return ResourceManager.GetString("ShadersText", resourceCulture); }
+        }
+
+        public static string FontsText
+        {
+            get { return ResourceManager.GetString("FontsText", resourceCulture); }
+        }
+
+        public static string TimelinesText
+        {
+            get { return ResourceManager.GetString("TimelinesText", resourceCulture); }
+        }
+
+        public static string GameObjectsText
+        {
+            get { return ResourceManager.GetString("GameObjectsText", resourceCulture); }
+        }
+
+        public static string RoomsText
+        {
+            get { return ResourceManager.GetString("RoomsText", resourceCulture); }
+        }
+        public static string ExtensionsText
+        {
+            get { return ResourceManager.GetString("ExtensionsText", resourceCulture); }
+        }
+        public static string TexturePageItemsText
+        {
+            get { return ResourceManager.GetString("TexturePageItemsText", resourceCulture); }
+        }
+        public static string CodeText
+        {
+            get { return ResourceManager.GetString("CodeText", resourceCulture); }
+        }
+        public static string VariablesText
+        {
+            get { return ResourceManager.GetString("VariablesText", resourceCulture); }
+        }
+        
+        public static string FunctionsText
+        {
+            get { return ResourceManager.GetString("FunctionsText", resourceCulture); }
+        }
+        public static string CodeLocalsText
+        {
+            get { return ResourceManager.GetString("CodeLocalsText", resourceCulture); }
+        }
+        public static string StringsText
+        {
+            get { return ResourceManager.GetString("StringsText", resourceCulture); }
+        }
+        public static string EmbeddedTexturesText
+        {
+            get { return ResourceManager.GetString("EmbeddedTexturesText", resourceCulture); }
+        }
+        public static string EmbeddedAudioText
+        {
+            get { return ResourceManager.GetString("EmbeddedAudioText", resourceCulture); }
+        }
+        public static string TextureGroupInformationText
+        {
+            get { return ResourceManager.GetString("TextureGroupInformationText", resourceCulture); }
+        }
+        public static string EmbeddedImagesText
+        {
+            get { return ResourceManager.GetString("EmbeddedImagesText", resourceCulture); }
+        }
+        public static string ParticleSystemsText
+        {
+            get { return ResourceManager.GetString("ParticleSystemsText", resourceCulture); }
+        }
+        public static string ParticleSystemEmittersText
+        {
+            get { return ResourceManager.GetString("ParticleSystemEmittersText", resourceCulture); }
+        }
+        
     }
-    
+
 }
 
