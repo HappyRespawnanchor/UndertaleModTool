@@ -80,5 +80,22 @@ namespace UndertaleModToolAvalonia.Assets {
                 return ResourceManager.GetString("Dark", resourceCulture);
             }
         }
+
+        public static string LanguageChangedTitle
+        {
+            get
+            {
+                return ResourceManager.GetString("LanguageChangedTitle", resourceCulture);
+            }
+        }
+
+        public static string RestartUndertaleModToolToApplyNewLanguage 
+        {
+            get
+            {
+                return ResourceManager.GetString("RestartUndertaleModToolToApplyNewLanguage", resourceCulture);
+            }
+        }
     }
 }
+

@@ -204,6 +204,13 @@ public partial class MainViewModel
         await ShowMessageDialog("UndertaleModTool by the Underminers team\nLicensed under the GNU General Public License Version 3.",
             title: "About", ok: true);
     }
+    public async void LanguageChangedToRestart()
+    {
+        await ShowMessageDialog("Are you sure you want to change the language? \n" +
+            "You will need to restart UndertaleModTool for the changes to take effect.",
+            title: "Language changed", yes: true, no: true);
+    }
+    
 
     public void DataItemAdd(IList list)
     {

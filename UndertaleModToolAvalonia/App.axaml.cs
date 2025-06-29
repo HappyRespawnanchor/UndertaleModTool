@@ -21,7 +21,8 @@ public partial class App : Application
 
     public override void OnFrameworkInitializationCompleted()
     {
-        Assets.Resources.Culture = new CultureInfo("zh-CN");
+        // Set the default culture to English.
+        CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("zh-Hans");
         // Without this line you will get duplicate validations from both Avalonia and CT
         BindingPlugins.DataValidators.RemoveAt(0);
 

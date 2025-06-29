@@ -33,4 +33,11 @@
     <data name="LanguageText" xml:space="preserve">
         <value>Language:</value>
     </data>
+    <data name="LanguageChangedTitle" xml:space="preserve">
+        <value>Language Changed</value>
+    </data>
+    <data name="RestartUndertaleModToolToApplyNewLanguage" xml:space="preserve">
+        <value>The language has been changed.
+Restart UndertaleModTool now to apply changes?</value>
+    </data>
 </root>

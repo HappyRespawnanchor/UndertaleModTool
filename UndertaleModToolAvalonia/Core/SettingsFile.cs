@@ -1,9 +1,14 @@
 ﻿using System;
 using System.Globalization;
+using Avalonia.Animation;
 using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
+using Avalonia.Layout;
+using Avalonia.Media;
+using Avalonia.Platform;
 using Avalonia.Styling;
 using PropertyChanged.SourceGenerator;
+using UndertaleModToolAvalonia.Assets;
 using UndertaleModToolAvalonia.Controls;
 using UndertaleModToolAvalonia.Views;
 
@@ -45,28 +50,21 @@ public partial class SettingsFile
     
     void OnLanguageChanged()
     {
-        switch (Language)
+        CultureInfo.CurrentUICulture = Language switch
         {
-            case LanguageValue.English:
-                CultureInfo.CurrentUICulture = new CultureInfo("en");
-                break;
-            case LanguageValue.ChineseSimplified:
-                CultureInfo.CurrentUICulture = new CultureInfo("zh-Hans");
-                break;
-        }
-        // 弹出提示，询问是否重启
-        // 弹出你的 MessageWindow
-        var msgWindow = new MessageWindow(
-            "Language has been changed.\nRestart UndertaleModTool now?", 
-            "Language Changed", 
-            yes: true, 
-            no: true
-        );
-
-        // 显示为对话框，等待结果
-        var result = msgWindow.ShowDialog<MessageWindow.Result>(new Window()).Result;
-
-
+            LanguageValue.English => new CultureInfo("en"),
+            LanguageValue.ChineseSimplified => new CultureInfo("zh-Hans"),
+            _ => CultureInfo.CurrentUICulture
+        };
+        
+        
+        MessageWindow window = new MessageWindow(titleText: Resources.LanguageChangedTitle,
+            message: Resources.RestartUndertaleModToolToApplyNewLanguage, hasNoButton: true, hasYesButton: true);
+  
+        
+        window.Initialize();
+        window.Show();
+        
     }
     
 }

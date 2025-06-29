@@ -26,4 +26,10 @@
     <data name="ThemeText" xml:space="preserve">
         <value>主题色：</value>
     </data>
+    <data name="LanguageChangedTitle" xml:space="preserve">
+        <value>语言更改</value>
+    </data>
+    <data name="RestartUndertaleModToolToApplyNewLanguage" xml:space="preserve">
+        <value>要重启 UndertaleModToll 以应用新的语言设置吗？</value>
+    </data>
 </root>
