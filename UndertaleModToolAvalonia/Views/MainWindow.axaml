@@ -27,23 +27,19 @@
                     <NativeMenuItem Header="{x:Static lang:Resources.FileCloseText}" Command="{Binding FileClose}"/>
                 </NativeMenu>
             </NativeMenuItem>
-            <NativeMenuItem Header="_Import" IsEnabled="False">
+            <NativeMenuItem Header="{x:Static lang:Resources.ImportMenuText}" IsEnabled="False">
             </NativeMenuItem>
-            <NativeMenuItem Header="_Export" IsEnabled="False">
+            <NativeMenuItem Header="{x:Static lang:Resources.ExportMenuText}" IsEnabled="False">
             </NativeMenuItem>
-            <NativeMenuItem Header="_Tools">
+            <NativeMenuItem Header="{x:Static lang:Resources.ToolsMenuText}">
                 <NativeMenu>
-                    <NativeMenuItem Header="{x:Static lang:Resources.SearchInCodeText}"/>
+                    <NativeMenuItem Header="{x:Static lang:Resources.SearchInCodeText}" Command="{Binding ToolsSearchInCode}" Gesture="Ctrl+Shift+F"/>
                     <NativeMenuItem Header="{x:Static lang:Resources.FindUnreferencedAssetsText}" IsEnabled="False"/>
                 </NativeMenu>
             </NativeMenuItem>
-            <NativeMenuItem Header="{x:Static lang:Resources.ScriptMenuText}" IsEnabled="False">
-            </NativeMenuItem>
-            <NativeMenuItem Header="{x:Static lang:Resources.FindMenuText}" IsEnabled="False">
-            </NativeMenuItem>
-            <NativeMenuItem Header="_Scripts">
+            <NativeMenuItem Header="{x:Static lang:Resources.ScriptMenuText}">
                 <NativeMenu>
-                    <NativeMenuItem Header="Run _other script" IsEnabled="False" />
+                    <NativeMenuItem Header="{x:Static lang:Resources.RunGameWithOtherRunnerText}" IsEnabled="False" />
                 </NativeMenu>
             </NativeMenuItem>
             <NativeMenuItem Header="{x:Static lang:Resources.HelpMenuText}">

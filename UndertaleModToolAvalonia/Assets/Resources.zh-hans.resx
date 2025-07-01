@@ -176,4 +176,13 @@
     <data name="GlobalInitScriptsText" xml:space="preserve">
         <value>全局初始化脚本</value>
     </data>
+    <data name="ImportMenuText" xml:space="preserve">
+        <value>导入(_I)</value>
+    </data>
+    <data name="ToolsMenuText" xml:space="preserve">
+        <value>工具(_T)</value>
+    </data>
+    <data name="ExportMenuText" xml:space="preserve">
+        <value>导出(_E)</value>
+    </data>
 </root>

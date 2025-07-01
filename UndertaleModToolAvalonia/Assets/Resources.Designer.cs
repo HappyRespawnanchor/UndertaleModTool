@@ -344,8 +344,28 @@ namespace UndertaleModToolAvalonia.Assets
         {
             get { return ResourceManager.GetString("ParticleSystemEmittersText", resourceCulture); }
         }
-        
-    }
+
+        public static string ToolsMenuText
+        {
+            get
+            {
+                return ResourceManager.GetString("ToolsMenuText", resourceCulture);
+            }
+        }
+
+        public static string ImportMenuText {
+            get
+            {
+                return ResourceManager.GetString("ImportMenuText", resourceCulture);
+            }
+        }
+
+        public static string ExportMenuText {
+            get
+            {
+                return ResourceManager.GetString("ExportMenuText", resourceCulture);
+            }
+        }    }
 
 }
 

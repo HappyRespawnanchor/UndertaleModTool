@@ -184,4 +184,13 @@ Restart UndertaleModTool now to apply changes?</value>
     <data name="GlobalInitScriptsText" xml:space="preserve">
         <value>Global init scripts</value>
     </data>
+    <data name="ImportMenuText" xml:space="preserve">
+        <value>_Import</value>
+    </data>
+    <data name="ToolsMenuText" xml:space="preserve">
+        <value>_Tools</value>
+    </data>
+    <data name="ExportMenuText" xml:space="preserve">
+        <value>_Export</value>
+    </data>
 </root>
