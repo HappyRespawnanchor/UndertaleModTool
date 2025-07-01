@@ -17,22 +17,33 @@
                     <NativeMenuItem Header="{x:Static lang:Resources.FileOpenText}" Command="{Binding FileOpen}" Gesture="Ctrl+O"/>
                     <NativeMenuItem Header="{x:Static lang:Resources.FileSaveText}" Command="{Binding FileSave}" Gesture="Ctrl+S"/>
                     <NativeMenuItemSeparator Header="-" />
-                    <NativeMenuItem Header="{x:Static lang:Resources.TempRunGameText}"/>
-                    <NativeMenuItem Header="{x:Static lang:Resources.RunGameUnderDebuggerText}"/>
-                    <NativeMenuItem Header="{x:Static lang:Resources.RunGameWithOtherRunnerText}"/>
+                    <NativeMenuItem Header="{x:Static lang:Resources.TempRunGameText}" IsEnabled="False"/>
+                    <NativeMenuItem Header="{x:Static lang:Resources.RunGameUnderDebuggerText}" IsEnabled="False"/>
+                    <NativeMenuItem Header="{x:Static lang:Resources.RunGameWithOtherRunnerText}" IsEnabled="False"/>
                     <NativeMenuItemSeparator Header="-" />
-                    <NativeMenuItem Header="{x:Static lang:Resources.GenerateOffsetMapText}"/>
+                    <NativeMenuItem Header="{x:Static lang:Resources.GenerateOffsetMapText}" IsEnabled="False"/>
                     <NativeMenuItemSeparator Header="-" />
                     <NativeMenuItem Header="{x:Static lang:Resources.SettingsText}" Command="{Binding FileSettings}"/>
                     <NativeMenuItem Header="{x:Static lang:Resources.FileCloseText}" Command="{Binding FileClose}"/>
                 </NativeMenu>
             </NativeMenuItem>
-            <NativeMenuItem Header="{x:Static lang:Resources.ScriptMenuText}">
+            <NativeMenuItem Header="_Import" IsEnabled="False">
             </NativeMenuItem>
-            <NativeMenuItem Header="{x:Static lang:Resources.FindMenuText}">
+            <NativeMenuItem Header="_Export" IsEnabled="False">
+            </NativeMenuItem>
+            <NativeMenuItem Header="_Tools">
                 <NativeMenu>
                     <NativeMenuItem Header="{x:Static lang:Resources.SearchInCodeText}"/>
-                    <NativeMenuItem Header="{x:Static lang:Resources.FindUnreferencedAssetsText}"/>
+                    <NativeMenuItem Header="{x:Static lang:Resources.FindUnreferencedAssetsText}" IsEnabled="False"/>
+                </NativeMenu>
+            </NativeMenuItem>
+            <NativeMenuItem Header="{x:Static lang:Resources.ScriptMenuText}" IsEnabled="False">
+            </NativeMenuItem>
+            <NativeMenuItem Header="{x:Static lang:Resources.FindMenuText}" IsEnabled="False">
+            </NativeMenuItem>
+            <NativeMenuItem Header="_Scripts">
+                <NativeMenu>
+                    <NativeMenuItem Header="Run _other script" IsEnabled="False" />
                 </NativeMenu>
             </NativeMenuItem>
             <NativeMenuItem Header="{x:Static lang:Resources.HelpMenuText}">
@@ -48,6 +59,7 @@
         <KeyBinding Gesture="Ctrl+N" Command="{Binding FileNew}" />
         <KeyBinding Gesture="Ctrl+O" Command="{Binding FileOpen}" />
         <KeyBinding Gesture="Ctrl+S" Command="{Binding FileSave}" />
+        <KeyBinding Gesture="Ctrl+Shift+F" Command="{Binding ToolsSearchInCode}" />
         <KeyBinding Gesture="F1" Command="{Binding HelpAbout}" />
     </Window.KeyBindings>
     

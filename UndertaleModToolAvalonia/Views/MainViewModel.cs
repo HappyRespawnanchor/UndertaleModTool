@@ -29,6 +29,7 @@ public partial class MainViewModel
     public MessageDialogDelegate? MessageDialog;
 
     public Func<Task>? SettingsDialog;
+    public Action? SearchInCodeOpen;
 
     // Settings
     public SettingsFile Settings { get; } = new();
@@ -195,6 +196,11 @@ public partial class MainViewModel
         }
     }
 
+    public void ToolsSearchInCode()
+    {
+        SearchInCodeOpen!();
+    }
+
     public void HelpGitHub()
     {
         LaunchUriAsync?.Invoke(new Uri("https://github.com/UnderminersTeam/UndertaleModTool"));
@@ -231,10 +237,10 @@ public partial class MainViewModel
         list.Add(res);
     }
     
-    public void TabOpen(object? item)
+    public TabItemViewModel? TabOpen(object? item)
     {
         if (Data is null)
-            return;
+            return null;
 
         if (item is TreeItemViewModel treeItem)
         {
@@ -279,7 +285,10 @@ public partial class MainViewModel
             TabItemViewModel tab = new(content);
             Tabs.Add(tab);
             TabSelected = tab;
+            return tab;
         }
+
+        return null;
     }
 
     public void TabClose(TabItemViewModel tab)
