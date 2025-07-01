@@ -365,7 +365,64 @@ namespace UndertaleModToolAvalonia.Assets
             {
                 return ResourceManager.GetString("ExportMenuText", resourceCulture);
             }
-        }    }
+        }
+
+        public static string NameText
+        {
+            get
+            {
+             return   ResourceManager.GetString("NameText", resourceCulture);
+            }
+        }
+
+        public static string ListText
+        {
+            get
+            {
+                return ResourceManager.GetString("ListText", resourceCulture);
+            }
+        }
+
+        public static string GroupNameText
+        {
+            get
+            {
+                return ResourceManager.GetString("GroupNameText", resourceCulture);
+            }
+        }
+
+        public static string BackgroundText
+        {
+            get
+            {
+                return ResourceManager.GetString("BackgroundText", resourceCulture);
+            }
+        }
+
+        public static string SplinesText
+        {
+            get
+            {
+                return ResourceManager.GetString("SplinesText", resourceCulture);
+            }
+        }
+
+        public static string OpenText
+        {
+            get
+            {
+                return ResourceManager.GetString("OpenText", resourceCulture);
+            }
+        }
+
+        public static string UndertaleStringReferenceText
+        {
+            get
+            {
+                return ResourceManager.GetString("UndertaleStringReferenceText", resourceCulture);
+            }
+        }
+    }
 
 }
 

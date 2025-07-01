@@ -193,4 +193,25 @@ Restart UndertaleModTool now to apply changes?</value>
     <data name="ExportMenuText" xml:space="preserve">
         <value>_Export</value>
     </data>
+    <data name="NameText" xml:space="preserve">
+        <value>Name</value>
+    </data>
+    <data name="ListText" xml:space="preserve">
+        <value>List</value>
+    </data>
+    <data name="GroupNameText" xml:space="preserve">
+        <value>Group name</value>
+    </data>
+    <data name="BackgroundText" xml:space="preserve">
+        <value>Background</value>
+    </data>
+    <data name="SplinesText" xml:space="preserve">
+        <value>Splines</value>
+    </data>
+    <data name="OpenText" xml:space="preserve">
+        <value>Open</value>
+    </data>
+    <data name="UndertaleStringReferenceText" xml:space="preserve">
+        <value>(UndertaleString reference)</value>
+    </data>
 </root>

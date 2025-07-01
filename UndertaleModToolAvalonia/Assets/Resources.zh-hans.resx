@@ -185,4 +185,25 @@
     <data name="ExportMenuText" xml:space="preserve">
         <value>导出(_E)</value>
     </data>
+    <data name="NameText" xml:space="preserve">
+        <value>名称</value>
+    </data>
+    <data name="ListText" xml:space="preserve">
+        <value>列表</value>
+    </data>
+    <data name="GroupNameText" xml:space="preserve">
+        <value>组名</value>
+    </data>
+    <data name="BackgroundText" xml:space="preserve">
+        <value>背景</value>
+    </data>
+    <data name="SplinesText" xml:space="preserve">
+        <value>图块集</value>
+    </data>
+    <data name="OpenText" xml:space="preserve">
+        <value>打开</value>
+    </data>
+    <data name="UndertaleStringReferenceText" xml:space="preserve">
+        <value>（Undertale 字符串引用）</value>
+    </data>
 </root>
