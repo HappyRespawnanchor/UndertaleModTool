@@ -51,7 +51,7 @@
             </c:EditableDataGrid>
         </Expander>
 
-        <Label>Spine sprites</Label>
+        <Label Content="{x:Static assets:Resources.SpineSpritesText}" />
         <Expander Header="{x:Static assets:Resources.ListText}">
             <c:EditableDataGrid ItemsSource="{Binding TextureGroupInfo.SpineSprites}" ItemFactory="{Binding CreateSpriteItem}">
                 <c:EditableDataGrid.Columns>

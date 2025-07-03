@@ -23,7 +23,7 @@
                     <NativeMenuItemSeparator Header="-" />
                     <NativeMenuItem Header="{x:Static lang:Resources.GenerateOffsetMapText}" IsEnabled="False"/>
                     <NativeMenuItemSeparator Header="-" />
-                    <NativeMenuItem Header="{x:Static lang:Resources.SettingsText}" Command="{Binding FileSettings}"/>
+                    <NativeMenuItem Header="{x:Static lang:Resources.SettingsMenuText}" Command="{Binding FileSettings}"/>
                     <NativeMenuItem Header="{x:Static lang:Resources.FileCloseText}" Command="{Binding FileClose}"/>
                 </NativeMenu>
             </NativeMenuItem>

@@ -17,14 +17,14 @@
         <Label Content="{x:Static assets:Resources.NameText}" />
         <c:UndertaleStringReferenceView Reference="{Binding Variable.Name}" />
 
-        <Label>Instance type</Label>
+        <Label Content="{x:Static assets:Resources.InstanceTypeText}" />
         <ComboBox ItemsSource="{Binding Source={x:Type undertalem:UndertaleInstruction+InstanceType}, Converter={StaticResource EnumTypeToValuesConverter}}"
                   SelectedItem="{Binding Variable.InstanceType}" />
 
-        <Label>VarID</Label>
+        <Label Content="{x:Static assets:Resources.VarIDText}" />
         <TextBox Text="{Binding Variable.VarID}" />
 
-        <Label>Name string ID</Label>
+        <Label Content="{x:Static assets:Resources.NameStringIDText}" />
         <TextBox Text="{Binding Variable.NameStringID}" />
     </Grid>
 </UserControl>

@@ -47,9 +47,7 @@ public partial class SettingsFile : INotifyPropertyChanged
         }
     }
 
-    /// <summary>
-    /// 当前UI实际语言（只读，可用于显示，不用于绑定ComboBox）
-    /// </summary>
+
     public LanguageValue CurrentLanguage
     {
         get
@@ -85,6 +83,10 @@ public partial class SettingsFile : INotifyPropertyChanged
     
     void OnLanguageChanged()
     {
+        MessageWindow window = new MessageWindow(titleText: Resources.LanguageChangedTitle,
+            message: Resources.RestartToApplyNewLanguageText, hasNoButton: true, hasYesButton: true);
+        window.Initialize();
+        window.Show();
         switch (_Language)
         {
             case LanguageValue.English:
@@ -95,12 +97,7 @@ public partial class SettingsFile : INotifyPropertyChanged
                 break;
         }
 
-        MessageWindow window = new MessageWindow(titleText: Resources.LanguageChangedTitle,
-            message: Resources.RestartToApplyNewLanguageText, hasNoButton: true, hasYesButton: true);
-        window.Initialize();
-        window.Show();
     }
 
-    // 若未实现INotifyPropertyChanged接口，请补充如下：
     public event PropertyChangedEventHandler? PropertyChanged;
 }

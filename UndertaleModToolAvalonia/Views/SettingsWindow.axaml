@@ -22,7 +22,7 @@
         </Grid>
 
         <Grid h:AutoGridBehavior.Enable="True" ColumnDefinitions="1*,3*">
-            <Label Content="{x:Static lang:Resources.LanguageText}" />
+            <Label Content="{x:Static lang:Resources.LanguageTitleText}" />
             <ComboBox SelectedIndex="{Binding MainVM.Settings.Language}">
                 <ComboBoxItem>English</ComboBoxItem>
                 <ComboBoxItem>简体中文</ComboBoxItem>

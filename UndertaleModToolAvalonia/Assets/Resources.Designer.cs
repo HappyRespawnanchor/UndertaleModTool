@@ -115,6 +115,19 @@ namespace UndertaleModToolAvalonia.Assets
         {
             get { return ResourceManager.GetString("AboutText", resourceCulture); }
         }
+    
+        public static string HelpAboutMessageText
+        {
+            get { return ResourceManager.GetString("HelpAboutMessageText", resourceCulture); }
+        }
+        public static string AboutMenuText
+        {
+            get
+            {
+                return ResourceManager.GetString("AboutMenuText", resourceCulture); 
+                
+            }
+        }
 
         public static string GitHubText
         {
@@ -180,7 +193,12 @@ namespace UndertaleModToolAvalonia.Assets
         {
             get { return ResourceManager.GetString("GenerateOffsetMapText", resourceCulture); }
         }
-
+        
+        public static string SettingsMenuText
+        {
+            get { return ResourceManager.GetString("SettingsMenuText", resourceCulture); }
+        }
+        
         public static string SettingsText
         {
             get { return ResourceManager.GetString("SettingsText", resourceCulture); }
@@ -190,38 +208,7 @@ namespace UndertaleModToolAvalonia.Assets
         {
             get { return ResourceManager.GetString("FileCloseText", resourceCulture); }
         }
-
-
-        /*
-         *     new(this, value: "GeneralInfo", header: "General info"),
-               new(this, value: "GlobalInitScripts", header: "Global init scripts"),
-               new(this, value: "GameEndScripts", header: "Game End scripts"),
-               new(this, tag: "list", value: "AudioGroups", header: "Audio groups"),
-               new(this, tag: "list", value: "Sounds", header: "Sounds"),
-               new(this, tag: "list", value: "Sprites", header: "Sprites"),
-               new(this, tag: "list", value: "Backgrounds", header: "Backgrounds & Tile sets"),
-               new(this, tag: "list", value: "Paths", header: "Paths"),
-               new(this, tag: "list", value: "Scripts", header: "Scripts"),
-               new(this, tag: "list", value: "Shaders", header: "Shaders"),
-               new(this, tag: "list", value: "Fonts", header: "Fonts"),
-               new(this, tag: "list", value: "Timelines", header: "Timelines"),
-               new(this, tag: "list", value: "GameObjects", header: "Game objects"),
-               new(this, tag: "list", value: "Rooms", header: "Rooms"),
-               new(this, tag: "list", value: "Extensions", header: "Extensions"),
-               new(this, tag: "list", value: "TexturePageItems", header: "Texture page items"),
-               new(this, tag: "list", value: "Code", header: "Code"),
-               new(this, tag: "list", value: "Variables", header: "Variables"),
-               new(this, tag: "list", value: "Functions", header: "Functions"),
-               new(this, tag: "list", value: "CodeLocals", header: "Code locals"),
-               new(this, tag: "list", value: "Strings", header: "Strings"),
-               new(this, tag: "list", value: "EmbeddedTextures", header: "Embedded textures"),
-               new(this, tag: "list", value: "EmbeddedAudio", header: "Embedded audio"),
-               new(this, tag: "list", value: "TextureGroupInformation", header: "Texture group information"),
-               new(this, tag: "list", value: "EmbeddedImages", header: "Embedded images"),
-               new(this, tag: "list", value: "ParticleSystems", header: "Particle systems"),
-               new(this, tag: "list", value: "ParticleSystemEmitters", header: "Particle system emitters"),
-           };
-         */
+        
         public static string GeneralInfoText
         {
             get { return ResourceManager.GetString("GeneralInfoText", resourceCulture); }
@@ -291,55 +278,67 @@ namespace UndertaleModToolAvalonia.Assets
         {
             get { return ResourceManager.GetString("RoomsText", resourceCulture); }
         }
+
         public static string ExtensionsText
         {
             get { return ResourceManager.GetString("ExtensionsText", resourceCulture); }
         }
+
         public static string TexturePageItemsText
         {
             get { return ResourceManager.GetString("TexturePageItemsText", resourceCulture); }
         }
+
         public static string CodeText
         {
             get { return ResourceManager.GetString("CodeText", resourceCulture); }
         }
+
         public static string VariablesText
         {
             get { return ResourceManager.GetString("VariablesText", resourceCulture); }
         }
-        
+
         public static string FunctionsText
         {
             get { return ResourceManager.GetString("FunctionsText", resourceCulture); }
         }
+
         public static string CodeLocalsText
         {
             get { return ResourceManager.GetString("CodeLocalsText", resourceCulture); }
         }
+
         public static string StringsText
         {
             get { return ResourceManager.GetString("StringsText", resourceCulture); }
         }
+
         public static string EmbeddedTexturesText
         {
             get { return ResourceManager.GetString("EmbeddedTexturesText", resourceCulture); }
         }
+
         public static string EmbeddedAudioText
         {
             get { return ResourceManager.GetString("EmbeddedAudioText", resourceCulture); }
         }
+
         public static string TextureGroupInformationText
         {
             get { return ResourceManager.GetString("TextureGroupInformationText", resourceCulture); }
         }
+
         public static string EmbeddedImagesText
         {
             get { return ResourceManager.GetString("EmbeddedImagesText", resourceCulture); }
         }
+
         public static string ParticleSystemsText
         {
             get { return ResourceManager.GetString("ParticleSystemsText", resourceCulture); }
         }
+
         public static string ParticleSystemEmittersText
         {
             get { return ResourceManager.GetString("ParticleSystemEmittersText", resourceCulture); }
@@ -347,82 +346,1320 @@ namespace UndertaleModToolAvalonia.Assets
 
         public static string ToolsMenuText
         {
-            get
-            {
-                return ResourceManager.GetString("ToolsMenuText", resourceCulture);
-            }
+            get { return ResourceManager.GetString("ToolsMenuText", resourceCulture); }
         }
 
-        public static string ImportMenuText {
-            get
-            {
-                return ResourceManager.GetString("ImportMenuText", resourceCulture);
-            }
+        public static string ImportMenuText
+        {
+            get { return ResourceManager.GetString("ImportMenuText", resourceCulture); }
         }
 
-        public static string ExportMenuText {
-            get
-            {
-                return ResourceManager.GetString("ExportMenuText", resourceCulture);
-            }
+        public static string ExportMenuText
+        {
+            get { return ResourceManager.GetString("ExportMenuText", resourceCulture); }
         }
 
         public static string NameText
         {
-            get
-            {
-             return   ResourceManager.GetString("NameText", resourceCulture);
-            }
+            get { return ResourceManager.GetString("NameText", resourceCulture); }
         }
 
         public static string ListText
         {
-            get
-            {
-                return ResourceManager.GetString("ListText", resourceCulture);
-            }
+            get { return ResourceManager.GetString("ListText", resourceCulture); }
         }
 
         public static string GroupNameText
         {
-            get
-            {
-                return ResourceManager.GetString("GroupNameText", resourceCulture);
-            }
+            get { return ResourceManager.GetString("GroupNameText", resourceCulture); }
         }
 
         public static string BackgroundText
         {
-            get
-            {
-                return ResourceManager.GetString("BackgroundText", resourceCulture);
-            }
+            get { return ResourceManager.GetString("BackgroundText", resourceCulture); }
         }
 
         public static string SplinesText
         {
-            get
-            {
-                return ResourceManager.GetString("SplinesText", resourceCulture);
-            }
+            get { return ResourceManager.GetString("SplinesText", resourceCulture); }
         }
 
         public static string OpenText
         {
-            get
-            {
-                return ResourceManager.GetString("OpenText", resourceCulture);
-            }
+            get { return ResourceManager.GetString("OpenText", resourceCulture); }
         }
 
         public static string UndertaleStringReferenceText
         {
+            get { return ResourceManager.GetString("UndertaleStringReferenceText", resourceCulture); }
+        }
+
+        public static string SpineSpritesText
+        {
+            get { return ResourceManager.GetString("SpineSpritesText", resourceCulture); }
+        }
+        //Instance type
+
+        public static string InstanceTypeText
+        {
+            get { return ResourceManager.GetString("InstanceTypeText", resourceCulture); }
+        }
+
+        //VarID
+        public static string VarIDText
+        {
+            get { return ResourceManager.GetString("VarIDText", resourceCulture); }
+        }
+
+        //Name string ID
+        public static string NameStringIDText
+        {
+            get { return ResourceManager.GetString("NameStringIDText", resourceCulture); }
+        }
+
+        public static string ContentText
+        {
+            get { return ResourceManager.GetString("ContentText", resourceCulture); }
+        }
+
+        public static string TypeText
+        {
+            get { return ResourceManager.GetString("TypeText", resourceCulture); }
+        }
+
+        public static string FileText
+        {
+            get { return ResourceManager.GetString("FileText", resourceCulture); }
+        }
+
+        public static string EffectsText
+        {
+            get { return ResourceManager.GetString("EffectsText", resourceCulture); }
+        }
+
+        public static string VolumeText
+        {
+            get { return ResourceManager.GetString("VolumeText", resourceCulture); }
+        }
+
+        public static string PitchText
+        {
+            get { return ResourceManager.GetString("PitchText", resourceCulture); }
+        }
+
+        public static string AudioGroupText
+        {
+            get { return ResourceManager.GetString("AudioGroupText", resourceCulture); }
+        }
+
+        public static string AudioFileText
+        {
+            get { return ResourceManager.GetString("AudioFileText", resourceCulture); }
+        }
+
+        public static string PreloadText
+        {
+            get { return ResourceManager.GetString("PreloadText", resourceCulture); }
+        }
+
+        public static string FlagsText
+        {
+            get { return ResourceManager.GetString("FlagsText", resourceCulture); }
+        }
+
+        public static string RemoveText
+        {
+            get { return ResourceManager.GetString("RemoveText", resourceCulture); }
+        }
+
+        public static string TypeReferenceText
+        {
+            get { return ResourceManager.GetString("TypeReferenceText", resourceCulture); }
+        }
+
+        public static string VersionText
+        {
             get
             {
-                return ResourceManager.GetString("UndertaleStringReferenceText", resourceCulture);
+                return ResourceManager.GetString("VersionText", resourceCulture);
+            }
+        }
+
+        public static string GLSLESVertexSourceText
+        {
+            get { return ResourceManager.GetString("GLSLESVertexSourceText", resourceCulture); }
+        }
+
+        public static string GLSLESFragmentSourceText
+        {
+            get { return ResourceManager.GetString("GLSLESFragmentSourceText", resourceCulture); }
+        }
+
+        public static string GLSLVertexSourceText
+        {
+            get { return ResourceManager.GetString("GLSLVertexSourceText", resourceCulture); }
+        }
+
+        public static string GLSLFragmentSourceText
+        {
+            get { return ResourceManager.GetString("GLSLFragmentSourceText", resourceCulture); }
+        }
+
+        public static string CodeHeaderText
+        {
+            get { return ResourceManager.GetString("CodeHeaderText", resourceCulture); }
+        }
+
+        public static string HLSL9VertexSourceText
+        {
+            get { return ResourceManager.GetString("HLSL9VertexSourceText", resourceCulture); }
+        }
+        public static string HLSL9FragmentSourceText
+        {
+            get { return ResourceManager.GetString("HLSL9FragmentSourceText", resourceCulture); }
+        }
+        public static string HLSL11VertexDataText
+        {
+            get { return ResourceManager.GetString("HLSL11VertexDataText", resourceCulture); }
+        }
+        public static string HLSL11PixelDataText
+        {
+            get { return ResourceManager.GetString("HLSL11PixelDataText", resourceCulture); }
+        }
+        public static string PSSLVertexDataText
+        {
+            get { return ResourceManager.GetString("PSSLVertexDataText", resourceCulture); }
+        }
+        public static string PSSLPixelDataText
+        {
+            get { return ResourceManager.GetString("PSSLPixelDataText", resourceCulture); }
+        }
+        public static string CgPSVitaVertexDataText
+        {
+            get { return ResourceManager.GetString("CgPSVitaVertexDataText", resourceCulture); }
+        }
+        public static string CgPSVitaPixelDataText
+        {
+            get { return ResourceManager.GetString("CgPSVitaPixelDataText", resourceCulture); }
+        }
+        public static string CgPS3VertexDataText
+        {
+            get { return ResourceManager.GetString("CgPS3VertexDataText", resourceCulture); }
+        }
+        public static string CgPS3PixelDataText
+        {
+            get { return ResourceManager.GetString("CgPS3PixelDataText", resourceCulture); }
+        }
+        public static string ImportText
+        {
+            get { return ResourceManager.GetString("ImportText", resourceCulture); }
+        }
+        public static string ExportText
+        {
+            get { return ResourceManager.GetString("ExportText", resourceCulture); }
+        }
+        public static string VertexShaderAttributesText
+        {
+            get { return ResourceManager.GetString("VertexShaderAttributesText", resourceCulture); }
+        }
+        public static string ViewText
+        {
+            get { return ResourceManager.GetString("ViewText", resourceCulture); }
+        }
+        public static string ViewsText
+        {
+            get { return ResourceManager.GetString("ViewsText", resourceCulture); }
+        }
+        public static string LegacyTilesText
+        {
+            get { return ResourceManager.GetString("LegacyTilesText", resourceCulture); }
+        }
+        public static string SequencesText
+        {
+            get { return ResourceManager.GetString("SequencesText", resourceCulture); }
+        }
+        public static string TextItemsText
+        {
+            get { return ResourceManager.GetString("TextItemsText", resourceCulture); }
+        }
+        public static string LayersText
+        {
+            get { return ResourceManager.GetString("LayersText", resourceCulture); }
+        }
+        public static string CaptionText
+        {
+            get { return ResourceManager.GetString("CaptionText", resourceCulture); }
+        }
+        public static string WidthHeightText
+        {
+            get { return ResourceManager.GetString("WidthHeightText", resourceCulture); }
+        }
+        public static string SpeedText
+        {
+            get { return ResourceManager.GetString("SpeedText", resourceCulture); }
+        }
+        public static string PersistentText
+        {
+            get { return ResourceManager.GetString("PersistentText", resourceCulture); }
+        }
+        public static string BackgroundColorText
+        {
+            get { return ResourceManager.GetString("BackgroundColorText", resourceCulture); }
+        }
+        public static string DrawBackgroundColorText
+        {
+            get { return ResourceManager.GetString("DrawBackgroundColorText", resourceCulture); }
+        }
+        public static string CreationCodeText
+        {
+            get { return ResourceManager.GetString("CreationCodeText", resourceCulture); }
+        }
+        public static string WorldText
+        {
+            get { return ResourceManager.GetString("WorldText", resourceCulture); }
+        }
+        public static string TopLeftRightBottomText
+        {
+            get { return ResourceManager.GetString("TopLeftRightBottomText", resourceCulture); }
+        }
+        public static string GravityXYText
+        {
+            get { return ResourceManager.GetString("GravityXYText", resourceCulture); }
+        }
+
+        public static string TilesText
+        {
+            get
+            {
+                return ResourceManager.GetString("TilesText", resourceCulture);
+            }
+        }
+
+        public static string EnabledText
+        {
+            get { return ResourceManager.GetString("EnabledText", resourceCulture); }
+        }
+        public static string ForegroundText
+        {
+            get { return ResourceManager.GetString("ForegroundText", resourceCulture); }
+        }
+        public static string DefinitionText
+        {
+            get { return ResourceManager.GetString("DefinitionText", resourceCulture); }
+        }
+        public static string PositionXYText
+        {
+            get { return ResourceManager.GetString("PositionXYText", resourceCulture); }
+        }
+        public static string TilingText
+        {
+            get { return ResourceManager.GetString("TilingText", resourceCulture); }
+        }
+        public static string HorizontalText
+        {
+            get { return ResourceManager.GetString("HorizontalText", resourceCulture); }
+        }
+        public static string VerticalText
+        {
+            get { return ResourceManager.GetString("VerticalText", resourceCulture); }
+        }
+        public static string SpeedXYText
+        {
+            get { return ResourceManager.GetString("SpeedXYText", resourceCulture); }
+        }
+        public static string StretchText
+        {
+            get { return ResourceManager.GetString("StretchText", resourceCulture); }
+        }
+        public static string ViewXYWHText
+        {
+            get { return ResourceManager.GetString("ViewXYWHText", resourceCulture); }
+        }
+        public static string PortXYWHText
+        {
+            get { return ResourceManager.GetString("PortXYWHText", resourceCulture); }
+        }
+        public static string BorderText
+        {
+            get { return ResourceManager.GetString("BorderText", resourceCulture); }
+        }
+        public static string FollowsObjectText
+        {
+            get { return ResourceManager.GetString("FollowsObjectText", resourceCulture); }
+        }
+        public static string InstanceIDText
+        {
+            get { return ResourceManager.GetString("InstanceIDText", resourceCulture); }
+        }
+        public static string ScaleXYText
+        {
+            get { return ResourceManager.GetString("ScaleXYText", resourceCulture); }
+        }
+        public static string ColorText
+        {
+            get { return ResourceManager.GetString("ColorText", resourceCulture); }
+        }
+        public static string RotationText
+        {
+            get { return ResourceManager.GetString("RotationText", resourceCulture); }
+        }
+        public static string FrameIndexText
+        {
+            get { return ResourceManager.GetString("FrameIndexText", resourceCulture); }
+        }
+        public static string ImageSpeedText
+        {
+            get { return ResourceManager.GetString("ImageSpeedText", resourceCulture); }
+        }
+        public static string PreCreateCodeText
+        {
+            get { return ResourceManager.GetString("PreCreateCodeText", resourceCulture); }
+        }
+        public static string SourceXYWHText
+        {
+            get { return ResourceManager.GetString("SourceXYWHText", resourceCulture); }
+        }
+        public static string TileDepthText
+        {
+            get { return ResourceManager.GetString("TileDepthText", resourceCulture); }
+        }
+        public static string LayerNameText
+        {
+            get { return ResourceManager.GetString("LayerNameText", resourceCulture); }
+        }
+        public static string LayerIdText
+        {
+            get { return ResourceManager.GetString("LayerIdText", resourceCulture); }
+        }
+        public static string LayerTypeText
+        {
+            get { return ResourceManager.GetString("LayerTypeText", resourceCulture); }
+        }
+        public static string LayerDepthText
+        {
+            get { return ResourceManager.GetString("LayerDepthText", resourceCulture); }
+        }
+        public static string VisibleText
+        {
+            get { return ResourceManager.GetString("VisibleText", resourceCulture); }
+        }
+
+        public static string OffsetXYText
+        {
+            get
+            {
+                return ResourceManager.GetString("OffsetXYText", resourceCulture);
+            }
+            
+        }
+
+        public static string SpriteText
+        {
+            get
+            {
+                return ResourceManager.GetString("SpriteText", resourceCulture);
+            }
+        }
+
+        public static string ContainsGameObjectInstancesText
+        {
+            get
+            {
+                return ResourceManager.GetString("ContainsGameObjectInstancesText", resourceCulture);
+            }
+        }
+
+        public static string SpeedHVText
+        {
+            get
+            {
+                return ResourceManager.GetString("SpeedHVText", resourceCulture);
+            }
+        }
+
+        public static string ContainsLegacyTilesAndSpritesText
+        {
+            get
+            {
+                return ResourceManager.GetString("ContainsLegacyTilesAndSpritesText", resourceCulture);
+            }
+        }
+
+        public static string SizeText
+        {
+            get
+            {
+                return ResourceManager.GetString("SizeText", resourceCulture);
+            }
+        }
+
+        public static string AutoText
+        {
+            get
+            {
+                return ResourceManager.GetString("AutoText", resourceCulture);
+            }
+        }
+
+        public static string TileSetText
+        {
+            get
+            {
+                return ResourceManager.GetString("TileSetText", resourceCulture);
+            }
+        }
+
+        public static string EffectText
+        {
+            get
+            {
+                return ResourceManager.GetString("EffectText", resourceCulture);
+            }
+        }
+
+        public static string Visible2Text
+        {
+            get
+            {
+             return ResourceManager.GetString("Visible2Text", resourceCulture);   
+            }
+        }
+
+        public static string FirstFrameText
+        {
+            get
+            {
+                return ResourceManager.GetString("FirstFrameText", resourceCulture);
+            }
+        }
+
+        public static string AnimationSpeedText
+        {
+            get
+            {
+                return ResourceManager.GetString("AnimationSpeedText", resourceCulture);
+            }
+        }
+
+        public static string SmoothText
+        {
+            get
+            {
+                return ResourceManager.GetString("SmoothText", resourceCulture);
+            }
+        }
+
+        public static string PointsPosText
+        {
+            get
+            {
+                return ResourceManager.GetString("PointsPosText", resourceCulture);
+            }
+        }
+
+        public static string PrecisionText
+        {
+            get
+            {
+                return ResourceManager.GetString("PrecisionText", resourceCulture);
+            }
+        }
+
+        public static string ClosedText
+        {
+            get
+            {
+                return ResourceManager.GetString("ClosedText", resourceCulture);
+            }
+        }
+
+        public static string OriginXYText
+        {
+            get
+            {
+                return ResourceManager.GetString("OriginXYText", resourceCulture);
+            }
+        }
+
+        public static string DrawOrderText
+        {
+            get
+            {
+                return ResourceManager.GetString("DrawOrderText", resourceCulture);
+            }
+        }
+
+        public static string GlobalSpaceParticlesText
+        {
+            get
+            {
+                return ResourceManager.GetString("GlobalSpaceParticlesText", resourceCulture);
+            }
+        }
+
+        public static string EmittersText
+        {
+            get
+            {
+                return ResourceManager.GetString("EmittersText", resourceCulture);
+            }
+        }
+
+        public static string PathText
+        {
+            get
+            {
+                return ResourceManager.GetString("PathText", resourceCulture);
+            }
+        }
+        public static string EmitRelativeText
+        {
+            get { return ResourceManager.GetString("EmitRelativeText", resourceCulture); }
+        }
+        public static string DelayMinMaxText
+        {
+            get { return ResourceManager.GetString("DelayMinMaxText", resourceCulture); }
+        }
+        public static string DelayTimeUnitText
+        {
+            get { return ResourceManager.GetString("DelayTimeUnitText", resourceCulture); }
+        }
+        public static string IntervalMinMaxText
+        {
+            get { return ResourceManager.GetString("IntervalMinMaxText", resourceCulture); }
+        }
+        public static string IntervalTimeUnitText
+        {
+            get { return ResourceManager.GetString("IntervalTimeUnitText", resourceCulture); }
+        }
+        public static string DistributionText
+        {
+            get { return ResourceManager.GetString("DistributionText", resourceCulture); }
+        }
+        public static string ShapeText
+        {
+            get { return ResourceManager.GetString("ShapeText", resourceCulture); }
+        }
+        public static string RegionXYWHText
+        {
+            get { return ResourceManager.GetString("RegionXYWHText", resourceCulture); }
+        }
+        public static string AnimateSpriteText
+        {
+            get { return ResourceManager.GetString("AnimateSpriteText", resourceCulture); }
+        }
+        public static string RandomText
+        {
+            get { return ResourceManager.GetString("RandomText", resourceCulture); }
+        }
+        public static string TextureText
+        {
+            get { return ResourceManager.GetString("TextureText", resourceCulture); }
+        }
+        public static string StartColorText
+        {
+            get { return ResourceManager.GetString("StartColorText", resourceCulture); }
+        }
+        public static string MiddleColorText
+        {
+            get { return ResourceManager.GetString("MiddleColorText", resourceCulture); }
+        }
+        public static string EndColorText
+        {
+            get { return ResourceManager.GetString("EndColorText", resourceCulture); }
+        }
+        public static string AdditiveColorBlendText
+        {
+            get { return ResourceManager.GetString("AdditiveColorBlendText", resourceCulture); }
+        }
+        public static string LifetimeMinMaxText
+        {
+            get { return ResourceManager.GetString("LifetimeMinMaxText", resourceCulture); }
+        }
+        public static string SizeMinXYText
+        {
+            get { return ResourceManager.GetString("SizeMinXYText", resourceCulture); }
+        }
+        public static string SizeMaxXYText
+        {
+            get { return ResourceManager.GetString("SizeMaxXYText", resourceCulture); }
+        }
+        public static string SizeIncreaseXYText
+        {
+            get { return ResourceManager.GetString("SizeIncreaseXYText", resourceCulture); }
+        }
+        public static string SizeWiggleXYText
+        {
+            get { return ResourceManager.GetString("SizeWiggleXYText", resourceCulture); }
+        }
+        public static string SpeedMinMaxText
+        {
+            get { return ResourceManager.GetString("SpeedMinMaxText", resourceCulture); }
+        }
+        public static string SpeedIncreaseText
+        {
+            get { return ResourceManager.GetString("SpeedIncreaseText", resourceCulture); }
+        }
+        public static string SpeedWiggleText
+        {
+            get { return ResourceManager.GetString("SpeedWiggleText", resourceCulture); }
+        }
+        public static string GravityForceText
+        {
+            get { return ResourceManager.GetString("GravityForceText", resourceCulture); }
+        }
+        public static string GravityDirectionText
+        {
+            get { return ResourceManager.GetString("GravityDirectionText", resourceCulture); }
+        }
+        public static string DirectionMinMaxText
+        {
+            get { return ResourceManager.GetString("DirectionMinMaxText", resourceCulture); }
+        }
+        public static string DirectionIncreaseText
+        {
+            get { return ResourceManager.GetString("DirectionIncreaseText", resourceCulture); }
+        }
+        public static string DirectionWiggleText
+        {
+            get { return ResourceManager.GetString("DirectionWiggleText", resourceCulture); }
+        }
+        public static string OrientationMinMaxText
+        {
+            get { return ResourceManager.GetString("OrientationMinMaxText", resourceCulture); }
+        }
+        public static string OrientationIncreaseText
+        {
+            get { return ResourceManager.GetString("OrientationIncreaseText", resourceCulture); }
+        }
+        public static string OrientationWiggleText
+        {
+            get { return ResourceManager.GetString("OrientationWiggleText", resourceCulture); }
+        }
+        public static string IsOrientationRelativeText
+        {
+            get { return ResourceManager.GetString("IsOrientationRelativeText", resourceCulture); }
+        }
+        public static string SpawnOnDeathText
+        {
+            get { return ResourceManager.GetString("SpawnOnDeathText", resourceCulture); }
+        }
+        public static string SpawnOnDeathCountText
+        {
+            get { return ResourceManager.GetString("SpawnOnDeathCountText", resourceCulture); }
+        }
+        public static string SpawnOnUpdateText
+        {
+            get { return ResourceManager.GetString("SpawnOnUpdateText", resourceCulture); }
+        }
+        public static string SpawnOnUpdateCountText
+        {
+            get { return ResourceManager.GetString("SpawnOnUpdateCountText", resourceCulture); }
+        }
+        public static string GameObjectText
+        {
+            get { return ResourceManager.GetString("GameObjectText", resourceCulture); }
+        }
+        public static string SolidText
+        {
+            get { return ResourceManager.GetString("SolidText", resourceCulture); }
+        }
+        public static string DepthText
+        {
+            get { return ResourceManager.GetString("DepthText", resourceCulture); }
+        }
+        public static string ParentText
+        {
+            get { return ResourceManager.GetString("ParentText", resourceCulture); }
+        }
+        public static string TextureMaskIdText
+        {
+            get { return ResourceManager.GetString("TextureMaskIdText", resourceCulture); }
+        }
+        public static string UsesPhysicsText
+        {
+            get { return ResourceManager.GetString("UsesPhysicsText", resourceCulture); }
+        }
+        public static string IsSensorText
+        {
+            get { return ResourceManager.GetString("IsSensorText", resourceCulture); }
+        }
+        public static string CollisionShapeText
+        {
+            get { return ResourceManager.GetString("CollisionShapeText", resourceCulture); }
+        }
+        public static string PhysicsText
+        {
+            get { return ResourceManager.GetString("PhysicsText", resourceCulture); }
+        }
+        public static string DensityText
+        {
+            get { return ResourceManager.GetString("DensityText", resourceCulture); }
+        }
+        public static string RestitutionText
+        {
+            get { return ResourceManager.GetString("RestitutionText", resourceCulture); }
+        }
+        public static string GroupText
+        {
+            get { return ResourceManager.GetString("GroupText", resourceCulture); }
+        }
+        public static string LinearDampingText
+        {
+            get { return ResourceManager.GetString("LinearDampingText", resourceCulture); }
+        }
+        public static string AngularDampingText
+        {
+            get { return ResourceManager.GetString("AngularDampingText", resourceCulture); }
+        }
+        public static string FrictionText
+        {
+            get { return ResourceManager.GetString("FrictionText", resourceCulture); }
+        }
+        public static string IsAwakeText
+        {
+            get { return ResourceManager.GetString("IsAwakeText", resourceCulture); }
+        }
+        public static string IsKinematicText
+        {
+            get { return ResourceManager.GetString("IsKinematicText", resourceCulture); }
+        }
+        public static string PhysicsShapeVerticesText
+        {
+            get { return ResourceManager.GetString("PhysicsShapeVerticesText", resourceCulture); }
+        }
+        public static string EventsText
+        {
+            get { return ResourceManager.GetString("EventsText", resourceCulture); }
+        }
+        public static string SubtypeIDText
+        {
+            get { return ResourceManager.GetString("SubtypeIDText", resourceCulture); }
+        }
+        public static string ActionsText
+        {
+            get { return ResourceManager.GetString("ActionsText", resourceCulture); }
+        }
+
+
+        public static string FontSizeEmText
+        {
+            get { return ResourceManager.GetString("FontSizeEmText", resourceCulture); }
+        }
+        public static string BoldText
+        {
+            get { return ResourceManager.GetString("BoldText", resourceCulture); }
+        }
+        public static string ItalicText
+        {
+            get { return ResourceManager.GetString("ItalicText", resourceCulture); }
+        }
+        public static string RangeStartEndText
+        {
+            get { return ResourceManager.GetString("RangeStartEndText", resourceCulture); }
+        }
+        public static string CharsetText
+        {
+            get { return ResourceManager.GetString("CharsetText", resourceCulture); }
+        }
+        public static string AntiAliasingText
+        {
+            get { return ResourceManager.GetString("AntiAliasingText", resourceCulture); }
+        }
+        public static string AscenderText
+        {
+            get { return ResourceManager.GetString("AscenderText", resourceCulture); }
+        }
+        public static string AscenderOffsetText
+        {
+            get { return ResourceManager.GetString("AscenderOffsetText", resourceCulture); }
+        }
+        public static string SDFSpreadValueText
+        {
+            get { return ResourceManager.GetString("SDFSpreadValueText", resourceCulture); }
+        }
+        public static string LineHeightText
+        {
+            get { return ResourceManager.GetString("LineHeightText", resourceCulture); }
+        }
+        public static string GlyphsText
+        {
+            get { return ResourceManager.GetString("GlyphsText", resourceCulture); }
+        }
+        public static string CharacterText
+        {
+            get { return ResourceManager.GetString("CharacterText", resourceCulture); }
+        }
+        public static string SourceXText
+        {
+            get { return ResourceManager.GetString("SourceXText", resourceCulture); }
+        }
+        public static string SourceYText
+        {
+            get { return ResourceManager.GetString("SourceYText", resourceCulture); }
+        }
+        public static string SourceWText
+        {
+            get { return ResourceManager.GetString("SourceWText", resourceCulture); }
+        }
+        public static string SourceHText
+        {
+            get { return ResourceManager.GetString("SourceHText", resourceCulture); }
+        }
+        public static string ShiftText
+        {
+            get { return ResourceManager.GetString("ShiftText", resourceCulture); }
+        }
+        public static string ShiftTipText
+        {
+            get { return ResourceManager.GetString("ShiftTipText", resourceCulture); }
+        }
+        public static string OffsetText
+        {
+            get { return ResourceManager.GetString("OffsetText", resourceCulture); }
+        }
+        public static string OffsetTipText
+        {
+            get { return ResourceManager.GetString("OffsetTipText", resourceCulture); }
+        }
+        public static string KerningOfSelectedGlyphText
+        {
+            get { return ResourceManager.GetString("KerningOfSelectedGlyphText", resourceCulture); }
+        }
+        public static string PrecedingCharacterText
+        {
+            get { return ResourceManager.GetString("PrecedingCharacterText", resourceCulture); }
+        }
+        public static string ShiftModifiedText
+        {
+            get { return ResourceManager.GetString("ShiftModifiedText", resourceCulture); }
+        }
+        public static string SortGlyphsText
+        {
+            get { return ResourceManager.GetString("SortGlyphsText", resourceCulture); }
+        }
+        public static string UpdateRangeText
+        {
+            get { return ResourceManager.GetString("UpdateRangeText", resourceCulture); }
+        }
+        public static string ClassNameText
+        {
+            get { return ResourceManager.GetString("ClassNameText", resourceCulture); }
+        }
+        public static string FilesText
+        {
+            get { return ResourceManager.GetString("FilesText", resourceCulture); }
+        }
+
+        public static string SelectedFilePropertiesText
+        {
+            get { return ResourceManager.GetString("SelectedFilePropertiesText", resourceCulture); }
+        }
+        public static string KindText
+        {
+            get { return ResourceManager.GetString("KindText", resourceCulture); }
+        }
+        public static string InitFunctionNameText
+        {
+            get { return ResourceManager.GetString("InitFunctionNameText", resourceCulture); }
+        }
+        public static string CleanupFunctionNameText
+        {
+            get { return ResourceManager.GetString("CleanupFunctionNameText", resourceCulture); }
+        }
+        public static string SelectedFunctionPropertiesText
+        {
+            get { return ResourceManager.GetString("SelectedFunctionPropertiesText", resourceCulture); }
+        }
+        public static string ExternalNameText
+        {
+            get { return ResourceManager.GetString("ExternalNameText", resourceCulture); }
+        }
+        public static string IDText
+        {
+            get { return ResourceManager.GetString("IDText", resourceCulture); }
+        }
+        public static string ReturnTypeText
+        {
+            get { return ResourceManager.GetString("ReturnTypeText", resourceCulture); }
+        }
+        public static string ArgumentTypesText
+        {
+            get { return ResourceManager.GetString("ArgumentTypesText", resourceCulture); }
+        }
+
+        public static string ValueText
+        {
+            get { return ResourceManager.GetString("ValueText", resourceCulture); }
+        }
+        public static string ScaledText
+        {
+            get { return ResourceManager.GetString("ScaledText", resourceCulture); }
+        }
+        public static string GeneratedMipsText
+        {
+            get { return ResourceManager.GetString("GeneratedMipsText", resourceCulture); }
+        }
+        public static string SaveImageText
+        {
+            get { return ResourceManager.GetString("SaveImageText", resourceCulture); }
+        }
+        public static string WAVDataLengthText
+        {
+            get { return ResourceManager.GetString("WAVDataLengthText", resourceCulture); }
+        }
+        public static string SaveAudioText
+        {
+            get { return ResourceManager.GetString("SaveAudioText", resourceCulture); }
+        }
+
+        public static string CodeEntryReferenceText
+        {
+            get { return ResourceManager.GetString("CodeEntryReferenceText", resourceCulture); }
+        }
+        public static string CodeEntryReferenceSuffixText
+        {
+            get { return ResourceManager.GetString("CodeEntryReferenceSuffixText", resourceCulture); }
+        }
+        public static string TransparentText
+        {
+            get { return ResourceManager.GetString("TransparentText", resourceCulture); }
+        }
+        public static string UnknownAlways2Text
+        {
+            get { return ResourceManager.GetString("UnknownAlways2Text", resourceCulture); }
+        }
+        public static string TileWidthText
+        {
+            get { return ResourceManager.GetString("TileWidthText", resourceCulture); }
+        }
+        public static string TileHeightText
+        {
+            get { return ResourceManager.GetString("TileHeightText", resourceCulture); }
+        }
+        public static string OutputBorderXText
+        {
+            get { return ResourceManager.GetString("OutputBorderXText", resourceCulture); }
+        }
+        public static string OutputBorderYText
+        {
+            get { return ResourceManager.GetString("OutputBorderYText", resourceCulture); }
+        }
+        public static string TileColumnsText
+        {
+            get { return ResourceManager.GetString("TileColumnsText", resourceCulture); }
+        }
+        public static string ItemsPerTileText
+        {
+            get { return ResourceManager.GetString("ItemsPerTileText", resourceCulture); }
+        }
+        public static string TileCountText
+        {
+            get { return ResourceManager.GetString("TileCountText", resourceCulture); }
+        }
+        public static string UnknownAlwaysZeroText
+        {
+            get { return ResourceManager.GetString("UnknownAlwaysZeroText", resourceCulture); }
+        }
+        public static string FrameTimeMicrosecondsText
+        {
+            get { return ResourceManager.GetString("FrameTimeMicrosecondsText", resourceCulture); }
+        }
+        public static string TileIDsText
+        {
+            get { return ResourceManager.GetString("TileIDsText", resourceCulture); }
+        }
+        public static string TileIDText
+        {
+            get { return ResourceManager.GetString("TileIDText", resourceCulture); }
+        }
+        public static string ImageText
+        {
+            get { return ResourceManager.GetString("ImageText", resourceCulture); }
+        }
+
+        public static string CaseSensitiveText
+        {
+            get
+            {
+                return ResourceManager.GetString("CaseSensitiveText", resourceCulture);
+            }
+        }
+
+        public static string RegexSearchText
+        {
+            get
+            {
+                return ResourceManager.GetString("RegexSearchText", resourceCulture);
+            }
+        }
+
+        public static string InAssemblyText
+        {
+            get
+            {
+                return ResourceManager.GetString("InAssemblyText", resourceCulture);
+            }
+        }
+
+        public static string LocationText
+        {
+            get
+            {
+                return ResourceManager.GetString("LocationText", resourceCulture);
+            }
+        }
+
+        public static string TextText
+        {
+            get
+            {
+                return ResourceManager.GetString("TextText", resourceCulture);
+            }
+        }
+
+        public static string DisableGMSDebuggerText {
+            get {
+                return ResourceManager.GetString("DisableGMSDebuggerText", resourceCulture);
+            }
+        }
+
+        public static string BytecodeVersionText {
+            get {
+                return ResourceManager.GetString("BytecodeVersionText", resourceCulture);
+            }
+        }
+
+        public static string UnknownText {
+            get {
+                return ResourceManager.GetString("UnknownText", resourceCulture);
+            }
+        }
+
+        public static string FileNameText {
+            get {
+                return ResourceManager.GetString("FileNameText", resourceCulture);
+            }
+        }
+
+        public static string ConfigText {
+            get {
+                return ResourceManager.GetString("ConfigText", resourceCulture);
+            }
+        }
+
+        public static string LastObjectIDText {
+            get {
+                return ResourceManager.GetString("LastObjectIDText", resourceCulture);
+            }
+        }
+
+        public static string LastTileIDText {
+            get {
+                return ResourceManager.GetString("LastTileIDText", resourceCulture);
+            }
+        }
+
+        public static string GameIDText {
+            get {
+                return ResourceManager.GetString("GameIDText", resourceCulture);
+            }
+        }
+
+        public static string DirectPlayGUIDText {
+            get {
+                return ResourceManager.GetString("DirectPlayGUIDText", resourceCulture);
+            }
+        }
+
+        public static string DefaultWindowSizeText {
+            get {
+                return ResourceManager.GetString("DefaultWindowSizeText", resourceCulture);
+            }
+        }
+
+
+        public static string LicenseMD5Text {
+            get {
+                return ResourceManager.GetString("LicenseMD5Text", resourceCulture);
+            }
+        }
+
+        public static string LicenseCRC32Text {
+            get {
+                return ResourceManager.GetString("LicenseCRC32Text", resourceCulture);
+            }
+        }
+
+        public static string TimestampText {
+            get {
+                return ResourceManager.GetString("TimestampText", resourceCulture);
+            }
+        }
+
+        public static string DisplayNameText {
+            get {
+                return ResourceManager.GetString("DisplayNameText", resourceCulture);
+            }
+        }
+
+        public static string ActiveTargetsText {
+            get {
+                return ResourceManager.GetString("ActiveTargetsText", resourceCulture);
+            }
+        }
+
+        public static string FunctionClassificationsText {
+            get {
+                return ResourceManager.GetString("FunctionClassificationsText", resourceCulture);
+            }
+        }
+
+        public static string SteamAppIDText {
+            get {
+                return ResourceManager.GetString("SteamAppIDText", resourceCulture);
+            }
+        }
+
+        public static string DebuggerPortText {
+            get {
+                return ResourceManager.GetString("DebuggerPortText", resourceCulture);
+            }
+        }
+
+        public static string RoomOrderText {
+            get {
+                return ResourceManager.GetString("RoomOrderText", resourceCulture);
+            }
+        }
+
+        public static string RoomText {
+            get {
+                return ResourceManager.GetString("RoomText", resourceCulture);
+            }
+        }
+
+        public static string FPSText {
+            get {
+                return ResourceManager.GetString("FPSText", resourceCulture);
+            }
+        }
+
+        public static string AllowStatisticsText {
+            get {
+                return ResourceManager.GetString("AllowStatisticsText", resourceCulture);
+            }
+        }
+
+        public static string GameGUIDText {
+            get {
+                return ResourceManager.GetString("GameGUIDText", resourceCulture);
+            }
+        }
+
+        public static string OptionsText {
+            get {
+                return ResourceManager.GetString("OptionsText", resourceCulture);
+            }
+        }
+
+        public static string ScaleText {
+            get {
+                return ResourceManager.GetString("ScaleText", resourceCulture);
+            }
+        }
+
+        public static string WindowColorText {
+            get {
+                return ResourceManager.GetString("WindowColorText", resourceCulture);
+            }
+        }
+
+        public static string ColorDepthText {
+            get {
+                return ResourceManager.GetString("ColorDepthText", resourceCulture);
+            }
+        }
+        public static string ResolutionText {
+            get {
+                return ResourceManager.GetString("ResolutionText", resourceCulture);
+            }
+        }
+
+        public static string FrequencyText {
+            get {
+                return ResourceManager.GetString("FrequencyText", resourceCulture);
+            }
+        }
+
+        public static string VertexSyncText {
+            get {
+                return ResourceManager.GetString("VertexSyncText", resourceCulture);
+            }
+        }
+
+        public static string PriorityText {
+            get {
+                return ResourceManager.GetString("PriorityText", resourceCulture);
+            }
+        }
+
+        public static string BackImageText {
+            get {
+                return ResourceManager.GetString("BackImageText", resourceCulture);
+            }
+        }
+        public static string FrontImageText {
+            get {
+                return ResourceManager.GetString("FrontImageText", resourceCulture);
+            }
+        }
+
+        public static string LoadImageText {
+            get {
+                return ResourceManager.GetString("LoadImageText", resourceCulture);
+            }
+        }
+
+        public static string LoadAlphaText {
+            get {
+                return ResourceManager.GetString("LoadAlphaText", resourceCulture);
+            }
+        }
+
+        public static string ConstantsText {
+            get {
+                return ResourceManager.GetString("ConstantsText", resourceCulture);
+            }
+        }
+
+
+        public static string LanguageCountText {
+            get {
+                return ResourceManager.GetString("LanguageCountText", resourceCulture);
+            }
+        }
+
+        public static string EntryCountText {
+            get {
+                return ResourceManager.GetString("EntryCountText", resourceCulture);
+            }
+        }
+
+        public static string LanguageTitleText
+        {
+            get
+            {
+                return ResourceManager.GetString("LanguageTitleText", resourceCulture);
+            }
+        }
+
+        public static string AudioGroupTitleText
+        {
+            get
+            {
+                return ResourceManager.GetString("AudioGroupTitleText", resourceCulture);
             }
         }
     }
-
 }
-
