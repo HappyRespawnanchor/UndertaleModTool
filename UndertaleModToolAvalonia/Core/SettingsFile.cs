@@ -1,37 +1,99 @@
 ﻿using System;
+using System.IO;
+using System.Reflection;
+using System.Text.Json;
+using System.Threading.Tasks;
+using Avalonia.Styling;
+using Microsoft.Extensions.DependencyInjection;
+using PropertyChanged.SourceGenerator;
+using UndertaleModToolAvalonia.Views;
 using System.ComponentModel;
 using System.Globalization;
-using Avalonia.Animation;
-using Avalonia.Controls;
-using Avalonia.Controls.ApplicationLifetimes;
-using Avalonia.Layout;
-using Avalonia.Media;
-using Avalonia.Platform;
-using Avalonia.Styling;
-using PropertyChanged.SourceGenerator;
 using UndertaleModToolAvalonia.Assets;
 using UndertaleModToolAvalonia.Controls;
-using UndertaleModToolAvalonia.Views;
 
 namespace UndertaleModToolAvalonia.Core;
 
-public partial class SettingsFile : INotifyPropertyChanged
+public partial class SettingsFile
 {
+    public MainViewModel MainVM = null!;
+
+    public SettingsFile() { }
+    public SettingsFile(IServiceProvider serviceProvider)
+    {
+        MainVM = serviceProvider.GetRequiredService<MainViewModel>();
+    }
+
+    public static async Task<SettingsFile> Load(IServiceProvider serviceProvider)
+    {
+        MainViewModel mainVM = serviceProvider.GetRequiredService<MainViewModel>();
+
+        string roamingAppData = Path.Join(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "UndertaleModToolAvalonia");
+
+        try
+        {
+            string path = Path.Join(roamingAppData, "Settings.json");
+
+            if (File.Exists(path))
+            {
+                string json = File.ReadAllText(path);
+                SettingsFile? settings = JsonSerializer.Deserialize<SettingsFile>(json, new JsonSerializerOptions()
+                {
+                    ReadCommentHandling = JsonCommentHandling.Skip,
+                    AllowTrailingCommas = true,
+                });
+
+                if (settings is not null)
+                {
+                    settings.MainVM = mainVM;
+                    return settings;
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            await mainVM.ShowMessageDialog($"Error when loading settings file: {e.Message}");
+            throw;
+        }
+
+        return new SettingsFile(serviceProvider);
+    }
+
+    public async void Save()
+    {
+        string roamingAppData = Path.Join(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "UndertaleModToolAvalonia");
+        Directory.CreateDirectory(roamingAppData);
+
+        string json = JsonSerializer.Serialize(this, new JsonSerializerOptions()
+        {
+            WriteIndented = true,
+        });
+
+        try
+        {
+            File.WriteAllText(Path.Join(roamingAppData, "Settings.json"), json);
+        }
+        catch (Exception e)
+        {
+            await MainVM.ShowMessageDialog($"Error when saving settings file: {e.Message}");
+        }
+    }
+
+    public string Version { get; set; } = Assembly.GetExecutingAssembly().GetName().Version?.ToString() ?? "?.?.?.?";
+
     public enum ThemeValue
     {
         SystemDefault = 0,
         Light = 1,
         Dark = 2,
     }
+    
     public enum LanguageValue
     {
         English = 0,
         ChineseSimplified = 1
     }
-
-    [Notify]
-    private ThemeValue _Theme;
-
+    
     private LanguageValue _Language = GetDefaultLanguage();
     public LanguageValue Language
     {
@@ -66,6 +128,9 @@ public partial class SettingsFile : INotifyPropertyChanged
             return LanguageValue.ChineseSimplified;
         return LanguageValue.English;
     }
+    
+    [Notify]
+    private ThemeValue _Theme;
 
     void OnThemeChanged()
     {
@@ -79,8 +144,10 @@ public partial class SettingsFile : INotifyPropertyChanged
                 _ => throw new NotImplementedException(),
             };
         }
+        Save();
     }
     
+        
     void OnLanguageChanged()
     {
         MessageWindow window = new MessageWindow(titleText: Resources.LanguageChangedTitle,
@@ -101,3 +168,4 @@ public partial class SettingsFile : INotifyPropertyChanged
 
     public event PropertyChangedEventHandler? PropertyChanged;
 }
+

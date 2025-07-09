@@ -23,6 +23,7 @@ public partial class MainView : UserControl
             {
                 vm.OpenFileDialog = OpenFileDialog;
                 vm.SaveFileDialog = SaveFileDialog;
+                vm.OpenFolderDialog = OpenFolderDialog;
                 vm.MessageDialog = MessageDialog;
                 vm.LaunchUriAsync = LaunchUriAsync;
                 vm.SettingsDialog = SettingsDialog;
@@ -35,7 +36,7 @@ public partial class MainView : UserControl
             if (DataContext is MainViewModel vm)
             {
                 vm.OnLoaded();
-    }
+            }
         };
     }
 
@@ -51,13 +52,19 @@ public partial class MainView : UserControl
         return await topLevel.StorageProvider.SaveFilePickerAsync(options);
     }
 
+    public async Task<IReadOnlyList<IStorageFolder>> OpenFolderDialog(FolderPickerOpenOptions options)
+    {
+        TopLevel topLevel = TopLevel.GetTopLevel(this)!;
+        return await topLevel.StorageProvider.OpenFolderPickerAsync(options);
+    }
+
     public async Task<bool> LaunchUriAsync(Uri uri)
     {
         TopLevel topLevel = TopLevel.GetTopLevel(this)!;
         return await topLevel.Launcher.LaunchUriAsync(uri);
     }
 
-    public async Task<MessageWindow.Result> MessageDialog(string message, string? title = null, bool ok = false, bool yes = false, bool no = false, bool cancel = false)
+    public async Task<MessageWindow.Result> MessageDialog(string message, string? title = null, bool ok = true, bool yes = false, bool no = false, bool cancel = false)
     {
         Window window = this.FindLogicalAncestorOfType<Window>() ?? throw new InvalidOperationException();
         return await new MessageWindow(message, title, ok, yes, no, cancel).ShowDialog<MessageWindow.Result>(window);
@@ -117,5 +124,15 @@ public partial class MainView : UserControl
                 }
             }
         }
+    }
+
+    private async void CommandTextBox_KeyDown(object? sender, KeyEventArgs e)
+    {
+        if (DataContext is MainViewModel vm)
+            if (e.Key == Key.Enter)
+            {
+                object? result = await vm.Scripting.RunScript(vm.CommandTextBoxText);
+                vm.CommandTextBoxText = result?.ToString() ?? "";
+            }
     }
 }

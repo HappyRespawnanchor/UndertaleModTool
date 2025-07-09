@@ -36,7 +36,7 @@
                 <Label Content="{x:Static assets:Resources.ConfigText}" />
                 <c:UndertaleStringReferenceView Reference="{Binding GeneralInfo.Config}"/>
             
-                <Label Content="{x:Static assets:Resources.LastObjectIDText}" />
+                <Label>Last object ID</Label>
                 <TextBox Text="{Binding GeneralInfo.LastObj}"/>
 
                 <Label Content="{x:Static assets:Resources.LastTileIDText}" />
@@ -96,7 +96,7 @@
                 <Label Content="{x:Static assets:Resources.DebuggerPortText}" />
                 <TextBox Text="{Binding GeneralInfo.DebuggerPort}" />
 
-                <Label Content="{x:Static assets:Resources.RoomOrderText}" />
+                <Label>Room order</Label>
                 <c:EditableDataGrid ItemsSource="{Binding GeneralInfo.RoomOrder, Mode=TwoWay}" ItemFactory="{Binding CreateRoomOrderItem}">
                     <c:EditableDataGrid.Columns>
                         <DataGridTemplateColumn Header="{x:Static assets:Resources.RoomText}" Width="1*">
@@ -170,7 +170,7 @@
                 <Label Content="{x:Static assets:Resources.LoadAlphaText}" />
                 <TextBox Text="{Binding Options.LoadAlpha}" />
 
-                <Label Content="{x:Static assets:Resources.ConstantsText}" />
+                <Label>{x:Static assets:Resources.ConstantsText}</Label>
                 <c:EditableDataGrid ItemsSource="{Binding Options.Constants}" ItemFactory="{Binding CreateConstant}">
                     <c:EditableDataGrid.Columns>
                         <DataGridTemplateColumn Header="{x:Static assets:Resources.NameText}" Width="1*">
@@ -193,18 +193,20 @@
         </StackPanel>
 
         <StackPanel IsVisible="{Binding Language}">
-            <TextBlock FontWeight="Bold" Text="{x:Static assets:Resources.LanguageText}"/>
+            <TextBlock FontWeight="Bold" Text="Language"/>
             <Separator/>
 
             <Grid h:AutoGridBehavior.Enable="True" ColumnDefinitions="1*,3*">
                 <Label Content="{x:Static assets:Resources.UnknownText}" />
                 <TextBox Text="{Binding Language.Unknown1}"/>
                 
-                <Label Content="{x:Static assets:Resources.LanguageCountText}" />
+                <Label>Language count</Label>
                 <TextBox Text="{Binding Language.LanguageCount}"/>
                 
                 <Label Content="{x:Static assets:Resources.EntryCountText}" />
                 <TextBox Text="{Binding Language.EntryCount}"/>
+                
+                <!-- TODO: Language editor -->
             </Grid>
         </StackPanel>
     </StackPanel>

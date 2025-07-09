@@ -21,7 +21,7 @@
         </Grid>
 
         <Grid h:AutoGridBehavior.Enable="True" ColumnDefinitions="1*,3*"
-              IsVisible="{Binding $parent[v:MainView].((v:MainViewModel)DataContext).Version,
+              IsVisible="{Binding $parent[v:MainView].((v:MainViewModel)DataContext).DataVersion,
               Converter={StaticResource VersionCompareConverter},
               ConverterParameter=GE2023.4}">
             <Label Content="{x:Static assets:Resources.VersionText}" />
@@ -131,7 +131,7 @@
         <Separator />
 
         <Grid h:AutoGridBehavior.Enable="True" ColumnDefinitions="1*,3*"
-              IsVisible="{Binding $parent[v:MainView].((v:MainViewModel)DataContext).Version,
+              IsVisible="{Binding $parent[v:MainView].((v:MainViewModel)DataContext).DataVersion,
               Converter={StaticResource VersionCompareConverter},
               ConverterParameter=GE2022.6}">
             <Label Content="{x:Static assets:Resources.OptionsText}" />

@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
@@ -24,19 +25,27 @@ public partial class MainViewModel
     // Set this when testing.
     public Func<FilePickerOpenOptions, Task<IReadOnlyList<IStorageFile>>>? OpenFileDialog;
     public Func<FilePickerSaveOptions, Task<IStorageFile?>>? SaveFileDialog;
+    public Func<FolderPickerOpenOptions, Task<IReadOnlyList<IStorageFolder>>> OpenFolderDialog;
     public Func<Uri, Task<bool>>? LaunchUriAsync;
 
-    public delegate Task<MessageWindow.Result> MessageDialogDelegate(string message, string? title = null, bool ok = false, bool yes = false, bool no = false, bool cancel = false);
+    public delegate Task<MessageWindow.Result> MessageDialogDelegate(string message, string? title = null, bool ok = true, bool yes = false, bool no = false, bool cancel = false);
     public MessageDialogDelegate? MessageDialog;
 
     public Func<Task>? SettingsDialog;
     public Action? SearchInCodeOpen;
 
+    // Services
+    public readonly IServiceProvider ServiceProvider;
+
     // Settings
-    public SettingsFile Settings { get; } = new();
+    public SettingsFile? Settings { get; set; }
+
+    // Scripting
+    public Scripting Scripting = null!;
 
     // Window
-    public string Title => $"UndertaleModToolAvalonia - v0.0.0.0" +
+    public string Title => $"UndertaleModToolAvalonia - v" +
+        Assembly.GetExecutingAssembly().GetName().Version?.ToString() ?? "?.?.?.?" +
         $"{(Data?.GeneralInfo is not null ? " - " + Data.GeneralInfo.ToString() : "")}" +
         $"{(DataPath is not null ? " [" + DataPath + "]" : "")}";
 
@@ -45,9 +54,8 @@ public partial class MainViewModel
     private UndertaleData? _Data;
     [Notify]
     private string? _DataPath;
-
     [Notify]
-    private (uint Major, uint Minor, uint Release, uint Build) _Version;
+    private (uint Major, uint Minor, uint Release, uint Build) _DataVersion;
 
     IReadOnlyList<FilePickerFileType> dataFileTypes =
     [
@@ -71,21 +79,30 @@ public partial class MainViewModel
     [Notify]
     private string _TabSelectedResourceIdString = "None";
 
+    // Command text box
+    [Notify]
+    private string _CommandTextBoxText = "";
+
     // Image cache
     public ImageCache ImageCache = new();
 
-    public MainViewModel()
+    public MainViewModel(IServiceProvider? serviceProvider = null)
     {
+        ServiceProvider = serviceProvider ?? App.Services;
+
         Tabs = [
             new TabItemViewModel(new DescriptionViewModel(
-                Resources.WelcomeText,
-                Resources.WelcomeDescription),
+                    Resources.WelcomeText,
+                    Resources.WelcomeDescription),
                 isSelected: true),
         ];
     }
 
     public async void OnLoaded()
     {
+        Settings = await SettingsFile.Load(ServiceProvider);
+        Scripting = new(ServiceProvider);
+
         if (Application.Current?.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
             if (desktop.Args?.Length >= 1)
@@ -106,10 +123,10 @@ public partial class MainViewModel
         }
     }
 
-    public async Task<MessageWindow.Result> ShowMessageDialog(string message, string? title = null, bool ok = false, bool yes = false, bool no = false, bool cancel = false)
+    public async Task<MessageWindow.Result> ShowMessageDialog(string message, string? title = null, bool ok = true, bool yes = false, bool no = false, bool cancel = false)
     {
         if (MessageDialog is not null)
-            return await MessageDialog.Invoke(message, title, ok, yes, no, cancel);
+            return await MessageDialog(message, title, ok, yes, no, cancel);
         return MessageWindow.Result.None;
     }
 
@@ -177,7 +194,7 @@ public partial class MainViewModel
 
     public void UpdateVersion()
     {
-        Version = Data is not null && Data.GeneralInfo is not null ? (Data.GeneralInfo.Major, Data.GeneralInfo.Minor, Data.GeneralInfo.Release, Data.GeneralInfo.Build) : default;
+        DataVersion = Data is not null && Data.GeneralInfo is not null ? (Data.GeneralInfo.Major, Data.GeneralInfo.Minor, Data.GeneralInfo.Release, Data.GeneralInfo.Build) : default;
     }
 
     private void DataGeneralInfoChangedHandler(object? sender, PropertyChangedEventArgs e)
@@ -204,7 +221,6 @@ public partial class MainViewModel
         var files = await OpenFileDialog!(new FilePickerOpenOptions()
         {
             Title = "Open data file",
-            AllowMultiple = false,
             FileTypeFilter = dataFileTypes,
         });
 
@@ -262,6 +278,39 @@ public partial class MainViewModel
         SearchInCodeOpen!();
     }
 
+    public async void ScriptsRunOtherScript()
+    {
+        var files = await OpenFileDialog!(new FilePickerOpenOptions()
+        {
+            Title = "Run script",
+            FileTypeFilter = [
+                new FilePickerFileType("C# scripts (.csx)")
+                {
+                    Patterns = ["*.csx"],
+                },
+                new FilePickerFileType("All files")
+                {
+                    Patterns = ["*"],
+                },
+            ],
+        });
+
+        if (files.Count != 1)
+            return;
+
+        string text;
+        using (Stream stream = await files[0].OpenReadAsync())
+        {
+            using StreamReader streamReader = new(stream);
+            text = streamReader.ReadToEnd();
+        }
+
+        string? filePath = files[0].TryGetLocalPath();
+        await Scripting.RunScript(text, filePath);
+
+        CommandTextBoxText = $"{Path.GetFileName(filePath) ?? "Script"} finished!";
+    }
+
     public void HelpGitHub()
     {
         LaunchUriAsync?.Invoke(new Uri("https://github.com/UnderminersTeam/UndertaleModTool"));
@@ -290,7 +339,7 @@ public partial class MainViewModel
 
         list.Add(res);
     }
-    
+
     public TabItemViewModel? TabOpen(object? item)
     {
         if (Data is null)
