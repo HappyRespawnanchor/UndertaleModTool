@@ -204,7 +204,7 @@
         <value>打开</value>
     </data>
     <data name="UndertaleStringReferenceText" xml:space="preserve">
-        <value>（Undertale 字符串引用）</value>
+        <value>(UndertaleString 引用)</value>
     </data>
     <data name="SpineSpritesText" xml:space="preserve">
         <value>Spine 精灵</value>

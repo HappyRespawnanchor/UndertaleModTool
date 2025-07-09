@@ -158,7 +158,7 @@ Restart UndertaleModTool now to apply changes?</value>
         <value>Functions</value>
     </data>
     <data name="CodeLocalsText" xml:space="preserve">
-        <value>Code locals text</value>
+        <value>Code locals</value>
     </data>
     <data name="StringsText" xml:space="preserve">
         <value>Strings</value>
